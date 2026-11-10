@@ -49,7 +49,7 @@ See [reproduction commands](docs/reproduction.md), [datasets and manifests](docs
 
 ## Related work
 
-[TAPS](https://arxiv.org/abs/2610.16318) also separates answer training from post-hoc selection. ReFrain studies multimodal unsolvability under a correct-answer-loss budget, with a shared adapted checkpoint and per-example tracking of acquired-answer retention. [The comparison](docs/taps-comparison.md) describes the substantial common structure and the differences in features, supervision, operating-point selection, and evaluation.
+[TAPS](https://arxiv.org/abs/2610.16318) studies answer training followed by post-hoc selection and is relevant prior work for the two-stage approach.
 
 The work builds on [MM-UPD](https://github.com/AtsuMiyai/UPD), [CLIP-UP](https://github.com/BenVr/CLIP-UP), and linear probing for LVLM abstention. BICR and ACR controls are adaptations to the common B1 and NOTA evaluation setting; their results are not the original papers' benchmark scores.
 
