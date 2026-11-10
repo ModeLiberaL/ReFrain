@@ -1,0 +1,253 @@
+{
+  "state": "complete",
+  "config": {
+    "method": "ACR-MCQ adaptation",
+    "source": "https://arxiv.org/html/2602.04924",
+    "feature": "2048-d final prompt hidden + 5 A-E raw logits; fixed A-E alphabet",
+    "base": "shared B1",
+    "rows": 1354,
+    "labels": "B1 actual response correctness",
+    "seed": 42,
+    "epochs": 15,
+    "batch_size": 32,
+    "optimizer": "Adam",
+    "lr": 8e-05,
+    "betas": [
+      0.95,
+      0.999
+    ],
+    "scheduler": "StepLR(8, gamma=0.1)",
+    "dropout": 0.1,
+    "head_width": 2053,
+    "parameters": 16871556,
+    "adaptation": "image MCQ replaces audio-video QA; answer alphabet and head width change; fixed QA-TIGER schedule",
+    "selection": "no E tuning; all T training; CM only threshold calibration"
+  },
+  "training_seconds": 56.84940528869629,
+  "correctness_metrics": {
+    "T": {
+      "auroc": 0.8980524829371617,
+      "brier": 0.06875412911176682
+    },
+    "CM": {
+      "auroc": 0.8101054741249221,
+      "brier": 0.16724924743175507
+    },
+    "E": {
+      "auroc": 0.8058411276387258,
+      "brier": 0.17093341052532196
+    }
+  },
+  "arms": [
+    {
+      "method": "ACR-MCQ",
+      "point": "default_threshold",
+      "budget": null,
+      "threshold": 0.5,
+      "calibration_lost": 73,
+      "standard": 0.8576253110558123,
+      "upd": 0.6700316706254948,
+      "circular_dual": 0.43548836156016885,
+      "gross_loss": 82,
+      "repairs": 0,
+      "retained_repairs": 25,
+      "repair_total": 57,
+      "standard_change_ci": [
+        -0.01457518663348738,
+        -0.020426080072296467,
+        -0.009379919735438658
+      ],
+      "upd_change_ci": [
+        0.12371338083927158,
+        0.11119966260779464,
+        0.13667053832885118
+      ],
+      "passes_original_rule": false,
+      "ours_half_percent_minus_control_standard_ci": [
+        0.013153217205830075,
+        0.007704151056465468,
+        0.01914574684123289
+      ],
+      "ours_half_percent_minus_control_upd_ci": [
+        0.07046714172604909,
+        0.05546108233760034,
+        0.08586555546626663
+      ]
+    },
+    {
+      "method": "ACR-MCQ",
+      "point": "loss_0.0",
+      "budget": 0.0,
+      "threshold": 0.30012956261634827,
+      "calibration_lost": 0,
+      "standard": 0.8722004976892996,
+      "upd": 0.5556215360253365,
+      "circular_dual": 0.38962582637783366,
+      "gross_loss": 0,
+      "repairs": 0,
+      "retained_repairs": 57,
+      "repair_total": 57,
+      "standard_change_ci": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "upd_change_ci": [
+        0.009303246239113222,
+        0.006050223639510994,
+        0.012823216281340345
+      ],
+      "passes_original_rule": true,
+      "ours_half_percent_minus_control_standard_ci": [
+        -0.0014219694276573053,
+        -0.003022370264814155,
+        -0.00034339922922334146
+      ],
+      "ours_half_percent_minus_control_upd_ci": [
+        0.18487727632620743,
+        0.16895099189486446,
+        0.20163767027752752
+      ]
+    },
+    {
+      "method": "ACR-MCQ",
+      "point": "loss_0.005",
+      "budget": 0.005,
+      "threshold": 0.3897428810596466,
+      "calibration_lost": 7,
+      "standard": 0.8697120511908994,
+      "upd": 0.5932304038004751,
+      "circular_dual": 0.39906359357957594,
+      "gross_loss": 14,
+      "repairs": 0,
+      "retained_repairs": 54,
+      "repair_total": 57,
+      "standard_change_ci": [
+        -0.002488446498400284,
+        -0.005316686368161778,
+        -0.000516784746961267
+      ],
+      "upd_change_ci": [
+        0.04691211401425178,
+        0.03983889663785328,
+        0.05507731881223297
+      ],
+      "passes_original_rule": true,
+      "ours_half_percent_minus_control_standard_ci": [
+        0.001066477070742979,
+        -0.0015435374242668144,
+        0.004025480363609207
+      ],
+      "ours_half_percent_minus_control_upd_ci": [
+        0.14726840855106887,
+        0.13184370100055395,
+        0.16357895032576403
+      ]
+    },
+    {
+      "method": "MSP_A-E",
+      "point": "default_threshold",
+      "budget": null,
+      "threshold": 0.5,
+      "calibration_lost": 73,
+      "standard": 0.8576253110558123,
+      "upd": 0.6700316706254948,
+      "circular_dual": 0.43548836156016885,
+      "gross_loss": 82,
+      "repairs": 0,
+      "retained_repairs": 25,
+      "repair_total": 57,
+      "standard_change_ci": [
+        -0.01457518663348738,
+        -0.020426080072296467,
+        -0.009379919735438658
+      ],
+      "upd_change_ci": [
+        0.12371338083927158,
+        0.11119966260779464,
+        0.13667053832885118
+      ],
+      "passes_original_rule": false,
+      "ours_half_percent_minus_control_standard_ci": [
+        0.013153217205830075,
+        0.007704151056465468,
+        0.01914574684123289
+      ],
+      "ours_half_percent_minus_control_upd_ci": [
+        0.07046714172604909,
+        0.05546108233760034,
+        0.08586555546626663
+      ]
+    },
+    {
+      "method": "MSP_A-E",
+      "point": "loss_0.0",
+      "budget": 0.0,
+      "threshold": 0.30012956261634827,
+      "calibration_lost": 0,
+      "standard": 0.8722004976892996,
+      "upd": 0.5556215360253365,
+      "circular_dual": 0.38962582637783366,
+      "gross_loss": 0,
+      "repairs": 0,
+      "retained_repairs": 57,
+      "repair_total": 57,
+      "standard_change_ci": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "upd_change_ci": [
+        0.009303246239113222,
+        0.006050223639510994,
+        0.012823216281340345
+      ],
+      "passes_original_rule": true,
+      "ours_half_percent_minus_control_standard_ci": [
+        -0.0014219694276573053,
+        -0.003022370264814155,
+        -0.00034339922922334146
+      ],
+      "ours_half_percent_minus_control_upd_ci": [
+        0.18487727632620743,
+        0.16895099189486446,
+        0.20163767027752752
+      ]
+    },
+    {
+      "method": "MSP_A-E",
+      "point": "loss_0.005",
+      "budget": 0.005,
+      "threshold": 0.3897428810596466,
+      "calibration_lost": 7,
+      "standard": 0.8697120511908994,
+      "upd": 0.5932304038004751,
+      "circular_dual": 0.39906359357957594,
+      "gross_loss": 14,
+      "repairs": 0,
+      "retained_repairs": 54,
+      "repair_total": 57,
+      "standard_change_ci": [
+        -0.002488446498400284,
+        -0.005316686368161778,
+        -0.000516784746961267
+      ],
+      "upd_change_ci": [
+        0.04691211401425178,
+        0.03983889663785328,
+        0.05507731881223297
+      ],
+      "passes_original_rule": true,
+      "ours_half_percent_minus_control_standard_ci": [
+        0.001066477070742979,
+        -0.0015435374242668144,
+        0.004025480363609207
+      ],
+      "ours_half_percent_minus_control_upd_ci": [
+        0.14726840855106887,
+        0.13184370100055395,
+        0.16357895032576403
+      ]
+    }
+  ]
+}

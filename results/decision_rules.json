@@ -1,0 +1,175 @@
+{
+  "status": "complete",
+  "default_logit_arms": [
+    {
+      "method": "logits_published_C1",
+      "threshold": 0,
+      "probability_threshold": 0.5,
+      "standard": 0.8027017419125488,
+      "upd": 0.9301266825019794,
+      "circular_dual": 0.6184997651442129,
+      "gross_loss": 391,
+      "repairs": 0,
+      "retained_repairs": 39,
+      "repair_total": 57,
+      "calibration_loss": 149,
+      "standard_change_ci": [
+        -0.0694987557767508,
+        -0.08265104934498341,
+        -0.05719998654409892
+      ],
+      "upd_change_ci": [
+        0.3838083927157561,
+        0.36103909003326634,
+        0.4061073768501001
+      ],
+      "passes_original_rule": false
+    },
+    {
+      "method": "logits_train_cv",
+      "threshold": 0,
+      "probability_threshold": 0.5,
+      "standard": 0.819232136509065,
+      "upd": 0.9216152019002375,
+      "circular_dual": 0.6444976273032629,
+      "gross_loss": 298,
+      "repairs": 0,
+      "retained_repairs": 45,
+      "repair_total": 57,
+      "calibration_loss": 111,
+      "standard_change_ci": [
+        -0.052968361180234624,
+        -0.06639792141489834,
+        -0.04077588747791966
+      ],
+      "upd_change_ci": [
+        0.3752969121140142,
+        0.35249661185700204,
+        0.39755276565638153
+      ],
+      "passes_original_rule": false
+    }
+  ],
+  "calibration_loss_table": [
+    {
+      "method": "logits_CV",
+      "budget": 0.0,
+      "cm_loss": 0,
+      "e_loss": 0,
+      "cm_standard": 2406,
+      "e_standard": 5626,
+      "cm_loss_rate": 0.0,
+      "e_loss_rate": 0.0
+    },
+    {
+      "method": "logits_CV",
+      "budget": 0.005,
+      "cm_loss": 11,
+      "e_loss": 8,
+      "cm_standard": 2406,
+      "e_standard": 5626,
+      "cm_loss_rate": 0.00457190357439734,
+      "e_loss_rate": 0.0014219694276573053
+    },
+    {
+      "method": "LP_C1_shared_executor",
+      "budget": 0.0,
+      "cm_loss": 0,
+      "e_loss": 0,
+      "cm_standard": 2406,
+      "e_standard": 5626,
+      "cm_loss_rate": 0.0,
+      "e_loss_rate": 0.0
+    },
+    {
+      "method": "LP_C1_shared_executor",
+      "budget": 0.005,
+      "cm_loss": 12,
+      "e_loss": 13,
+      "cm_standard": 2406,
+      "e_standard": 5626,
+      "cm_loss_rate": 0.004987531172069825,
+      "e_loss_rate": 0.002310700319943121
+    },
+    {
+      "method": "MSP",
+      "budget": 0.0,
+      "cm_loss": 0,
+      "e_loss": 0,
+      "cm_standard": 2406,
+      "e_standard": 5626,
+      "cm_loss_rate": 0.0,
+      "e_loss_rate": 0.0
+    },
+    {
+      "method": "MSP",
+      "budget": 0.005,
+      "cm_loss": 7,
+      "e_loss": 14,
+      "cm_standard": 2406,
+      "e_standard": 5626,
+      "cm_loss_rate": 0.0029093931837073984,
+      "e_loss_rate": 0.002488446498400284
+    },
+    {
+      "method": "negative_entropy",
+      "budget": 0.0,
+      "cm_loss": 0,
+      "e_loss": 0,
+      "cm_standard": 2406,
+      "e_standard": 5626,
+      "cm_loss_rate": 0.0,
+      "e_loss_rate": 0.0
+    },
+    {
+      "method": "negative_entropy",
+      "budget": 0.005,
+      "cm_loss": 8,
+      "e_loss": 3,
+      "cm_standard": 2406,
+      "e_standard": 5626,
+      "cm_loss_rate": 0.0033250207813798837,
+      "e_loss_rate": 0.0005332385353714896
+    },
+    {
+      "method": "CLIP_raw_C1",
+      "budget": 0.0,
+      "cm_loss": 0,
+      "e_loss": 0,
+      "cm_standard": 2406,
+      "e_standard": 5626,
+      "cm_loss_rate": 0.0,
+      "e_loss_rate": 0.0
+    },
+    {
+      "method": "CLIP_raw_C1",
+      "budget": 0.005,
+      "cm_loss": 12,
+      "e_loss": 29,
+      "cm_standard": 2406,
+      "e_standard": 5626,
+      "cm_loss_rate": 0.004987531172069825,
+      "e_loss_rate": 0.005154639175257732
+    },
+    {
+      "method": "CLIP_train_CV",
+      "budget": 0.0,
+      "cm_loss": 0,
+      "e_loss": 0,
+      "cm_standard": 2406,
+      "e_standard": 5626,
+      "cm_loss_rate": 0.0,
+      "e_loss_rate": 0.0
+    },
+    {
+      "method": "CLIP_train_CV",
+      "budget": 0.005,
+      "cm_loss": 12,
+      "e_loss": 8,
+      "cm_standard": 2406,
+      "e_standard": 5626,
+      "cm_loss_rate": 0.004987531172069825,
+      "e_loss_rate": 0.0014219694276573053
+    }
+  ]
+}

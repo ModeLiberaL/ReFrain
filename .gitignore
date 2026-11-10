@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.venv/
+data/
+runs/
+models/
+third_party/
+*.safetensors
+*.pt
+*.npy
+*.npz
+.env
+.env.*

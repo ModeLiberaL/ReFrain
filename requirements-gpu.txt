@@ -1,0 +1,6 @@
+-r requirements.txt
+torch==2.13.0
+transformers==5.17.0
+peft==0.21.2
+accelerate
+optuna

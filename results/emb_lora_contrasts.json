@@ -1,0 +1,56 @@
+{
+  "reference": "R3 EmbLoRA on shared B1",
+  "unit": "proportion",
+  "bootstrap_draws": 2000,
+  "bootstrap_seed": 0,
+  "arms": [
+    {
+      "arm": "R2_loss0",
+      "standard_difference_ci": [
+        0.0037326697476004265,
+        -0.0021340136280538474,
+        0.009912958555088346
+      ],
+      "upd_difference_ci": [
+        -0.02711797307996833,
+        -0.04070081501263674,
+        -0.013236998831357412
+      ],
+      "gross_loss_reduction_ci": [
+        0.011020263064344117,
+        0.00688920915735912,
+        0.0159687672485248
+      ],
+      "new_repair_retention_difference_ci": [
+        0.2982456140350877,
+        0.1372481869460113,
+        0.5084820101100207
+      ],
+      "bootstrap_nonempty_repair_draws": 2000
+    },
+    {
+      "arm": "R2_loss0.005",
+      "standard_difference_ci": [
+        0.002310700319943121,
+        -0.0036639395846444303,
+        0.008687766990087605
+      ],
+      "upd_difference_ci": [
+        0.0940221694378464,
+        0.07770350473549176,
+        0.11049085062058672
+      ],
+      "gross_loss_reduction_ci": [
+        0.009598293636686812,
+        0.005176343591218483,
+        0.014700933600697063
+      ],
+      "new_repair_retention_difference_ci": [
+        0.2631578947368421,
+        0.07352044476327116,
+        0.49056603773584906
+      ],
+      "bootstrap_nonempty_repair_draws": 2000
+    }
+  ]
+}

@@ -1,0 +1,261 @@
+{
+  "state": "complete",
+  "config": {
+    "method": "ACR-MCQ standardized",
+    "source": "https://arxiv.org/html/2602.04924",
+    "feature": "2048-d final prompt hidden + 5 A-E raw logits; fixed A-E alphabet",
+    "base": "shared B1",
+    "rows": 1354,
+    "labels": "B1 actual response correctness",
+    "seed": 42,
+    "epochs": 15,
+    "batch_size": 32,
+    "optimizer": "Adam",
+    "lr": 8e-05,
+    "betas": [
+      0.95,
+      0.999
+    ],
+    "scheduler": "StepLR(8, gamma=0.1)",
+    "dropout": 0.1,
+    "head_width": 2053,
+    "parameters": 16871556,
+    "standardization": "T-only mean/std for learned heads; unscaled MSP",
+    "adaptation": "image MCQ replaces audio-video QA; answer alphabet and head width change; fixed QA-TIGER schedule",
+    "selection": "no E tuning; all T training; CM only threshold calibration"
+  },
+  "training_seconds": 41.271597146987915,
+  "correctness_metrics": {
+    "T": {
+      "auroc": 0.999005648387856,
+      "brier": 0.006444097030907869
+    },
+    "CM": {
+      "auroc": 0.9178179772225645,
+      "brier": 0.1134829968214035
+    },
+    "E": {
+      "auroc": 0.9130567164776499,
+      "brier": 0.12063796073198318
+    }
+  },
+  "arms": [
+    {
+      "method": "ACR-MCQ standardized",
+      "point": "default_threshold",
+      "budget": null,
+      "threshold": 0.5,
+      "calibration_lost": 104,
+      "standard": 0.8227870600782083,
+      "upd": 0.8220506730007918,
+      "circular_dual": 0.4942360068856055,
+      "gross_loss": 278,
+      "repairs": 0,
+      "retained_repairs": 23,
+      "repair_total": 57,
+      "standard_change_ci": [
+        -0.04941343761109136,
+        -0.059668519643580394,
+        -0.04008621999321939
+      ],
+      "upd_change_ci": [
+        0.2757323832145685,
+        0.25893814208032506,
+        0.29399310399754164
+      ],
+      "passes_original_rule": false,
+      "ours_half_percent_minus_control_standard_ci": [
+        0.047991468183434055,
+        0.038502533754647926,
+        0.05835336260115535
+      ],
+      "ours_half_percent_minus_control_upd_ci": [
+        -0.08155186064924783,
+        -0.09977260215498394,
+        -0.06362128175007913
+      ]
+    },
+    {
+      "method": "ACR-MCQ standardized",
+      "point": "loss_0.0",
+      "budget": 0.0,
+      "threshold": 0.0011514362413436174,
+      "calibration_lost": 0,
+      "standard": 0.8722004976892996,
+      "upd": 0.5797703879651623,
+      "circular_dual": 0.3991534648253327,
+      "gross_loss": 0,
+      "repairs": 0,
+      "retained_repairs": 57,
+      "repair_total": 57,
+      "standard_change_ci": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "upd_change_ci": [
+        0.03345209817893904,
+        0.028700112127139108,
+        0.038677620168849056
+      ],
+      "passes_original_rule": true,
+      "ours_half_percent_minus_control_standard_ci": [
+        -0.0014219694276573053,
+        -0.003022370264814155,
+        -0.00034339922922334146
+      ],
+      "ours_half_percent_minus_control_upd_ci": [
+        0.16072842438638163,
+        0.1446292804883105,
+        0.17669877963037928
+      ]
+    },
+    {
+      "method": "ACR-MCQ standardized",
+      "point": "loss_0.005",
+      "budget": 0.005,
+      "threshold": 0.02868751436471939,
+      "calibration_lost": 10,
+      "standard": 0.8658016352648418,
+      "upd": 0.6720110847189232,
+      "circular_dual": 0.4346412058879867,
+      "gross_loss": 36,
+      "repairs": 0,
+      "retained_repairs": 53,
+      "repair_total": 57,
+      "standard_change_ci": [
+        -0.006398862424457874,
+        -0.009612801699460632,
+        -0.0035020213266123224
+      ],
+      "upd_change_ci": [
+        0.12569279493269991,
+        0.11445057156073662,
+        0.13734161951819573
+      ],
+      "passes_original_rule": true,
+      "ours_half_percent_minus_control_standard_ci": [
+        0.004976892996800568,
+        0.002073358413132695,
+        0.008055026449452747
+      ],
+      "ours_half_percent_minus_control_upd_ci": [
+        0.06848772763262075,
+        0.053198561987964146,
+        0.08320342627367816
+      ]
+    },
+    {
+      "method": "MSP_A-E",
+      "point": "default_threshold",
+      "budget": null,
+      "threshold": 0.5,
+      "calibration_lost": 73,
+      "standard": 0.8576253110558123,
+      "upd": 0.6700316706254948,
+      "circular_dual": 0.43548836156016885,
+      "gross_loss": 82,
+      "repairs": 0,
+      "retained_repairs": 25,
+      "repair_total": 57,
+      "standard_change_ci": [
+        -0.01457518663348738,
+        -0.020426080072296467,
+        -0.009379919735438658
+      ],
+      "upd_change_ci": [
+        0.12371338083927158,
+        0.11119966260779464,
+        0.13667053832885118
+      ],
+      "passes_original_rule": false,
+      "ours_half_percent_minus_control_standard_ci": [
+        0.013153217205830075,
+        0.007704151056465468,
+        0.01914574684123289
+      ],
+      "ours_half_percent_minus_control_upd_ci": [
+        0.07046714172604909,
+        0.05546108233760034,
+        0.08586555546626663
+      ]
+    },
+    {
+      "method": "MSP_A-E",
+      "point": "loss_0.0",
+      "budget": 0.0,
+      "threshold": 0.30012956261634827,
+      "calibration_lost": 0,
+      "standard": 0.8722004976892996,
+      "upd": 0.5556215360253365,
+      "circular_dual": 0.38962582637783366,
+      "gross_loss": 0,
+      "repairs": 0,
+      "retained_repairs": 57,
+      "repair_total": 57,
+      "standard_change_ci": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "upd_change_ci": [
+        0.009303246239113222,
+        0.006050223639510994,
+        0.012823216281340345
+      ],
+      "passes_original_rule": true,
+      "ours_half_percent_minus_control_standard_ci": [
+        -0.0014219694276573053,
+        -0.003022370264814155,
+        -0.00034339922922334146
+      ],
+      "ours_half_percent_minus_control_upd_ci": [
+        0.18487727632620743,
+        0.16895099189486446,
+        0.20163767027752752
+      ]
+    },
+    {
+      "method": "MSP_A-E",
+      "point": "loss_0.005",
+      "budget": 0.005,
+      "threshold": 0.3897428810596466,
+      "calibration_lost": 7,
+      "standard": 0.8697120511908994,
+      "upd": 0.5932304038004751,
+      "circular_dual": 0.39906359357957594,
+      "gross_loss": 14,
+      "repairs": 0,
+      "retained_repairs": 54,
+      "repair_total": 57,
+      "standard_change_ci": [
+        -0.002488446498400284,
+        -0.005316686368161778,
+        -0.000516784746961267
+      ],
+      "upd_change_ci": [
+        0.04691211401425178,
+        0.03983889663785328,
+        0.05507731881223297
+      ],
+      "passes_original_rule": true,
+      "ours_half_percent_minus_control_standard_ci": [
+        0.001066477070742979,
+        -0.0015435374242668144,
+        0.004025480363609207
+      ],
+      "ours_half_percent_minus_control_upd_ci": [
+        0.14726840855106887,
+        0.13184370100055395,
+        0.16357895032576403
+      ]
+    }
+  ],
+  "training_gate_quantiles": [
+    2.7595609353170403e-08,
+    5.918298938922817e-05,
+    0.9396717846393585,
+    0.9999998807907104,
+    1.0
+  ]
+}

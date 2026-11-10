@@ -1,0 +1,56 @@
+{
+  "seed": 42,
+  "epochs": 3,
+  "rows": 677,
+  "images": 488,
+  "micro_batch": 1,
+  "effective_batch": 4,
+  "learning_rate": 2e-05,
+  "weight_decay": 0.01,
+  "warmup_ratio": 0.03,
+  "warmup_steps": 16,
+  "total_steps": 510,
+  "scheduler": "linear",
+  "lora_r": 16,
+  "lora_alpha": 32,
+  "lora_dropout": 0.05,
+  "max_grad_norm": null,
+  "trainable_parameters": 29933568,
+  "gradient_checkpointing": true,
+  "dtype": "bfloat16",
+  "adapter_dtype": "torch.float32",
+  "attention": "sdpa",
+  "image_processor": {
+    "size": {
+      "longest_edge": 12845056,
+      "shortest_edge": 3136
+    },
+    "patch_size": 14,
+    "temporal_patch_size": 2,
+    "merge_size": 2,
+    "image_mean": [
+      0.48145466,
+      0.4578275,
+      0.40821073
+    ],
+    "image_std": [
+      0.26862954,
+      0.26130258,
+      0.27577711
+    ],
+    "image_processor_type": "Qwen2VLImageProcessor",
+    "do_convert_rgb": true,
+    "do_resize": true,
+    "resample": 3,
+    "do_rescale": true,
+    "rescale_factor": 0.00392156862745098,
+    "do_normalize": true
+  },
+  "sequence_truncation": false,
+  "target": "correct letter plus im_end; prompt and trailing newline ignored",
+  "torch": "2.13.0+cu130",
+  "transformers": "5.17.0",
+  "peft": "0.21.2",
+  "gpu": "NVIDIA RTX PRO 5000 72GB Blackwell",
+  "gpu_memory_bytes": 76368052224
+}

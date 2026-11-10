@@ -1,0 +1,167 @@
+{
+  "state": "complete",
+  "arm": {
+    "method": "ordinary_refusal_SFT",
+    "standard": 0.8531816565943833,
+    "upd": 0.8747030878859857,
+    "circular_dual": 0.6641035831310033,
+    "gross_loss": 140,
+    "repairs": 33,
+    "new_repair_loss": 34,
+    "retained_repairs": 23,
+    "repair_total": 57,
+    "standard_change_ci": [
+      -0.019018841094916458,
+      -0.02841956328996669,
+      -0.010087344007909097
+    ],
+    "upd_change_ci": [
+      0.32838479809976245,
+      0.308423831544975,
+      0.3487378490383581
+    ],
+    "passes_original_rule": false
+  },
+  "contrasts": {
+    "R2_loss0_minus_SFT": {
+      "standard_ci": [
+        0.019018841094916458,
+        0.010087344007909092,
+        0.028419563289966678
+      ],
+      "upd_ci": [
+        -0.25534441805225655,
+        -0.2739701370970503,
+        -0.23742936745293156
+      ],
+      "gross_loss_reduction_ci": [
+        0.024884464984002843,
+        0.01683795725923684,
+        0.033935579842302735
+      ],
+      "repaired_answer_retention_ci": [
+        0.5964912280701754,
+        0.4,
+        0.8181818181818182
+      ]
+    },
+    "R2_loss0.005_minus_SFT": {
+      "standard_ci": [
+        0.017596871667259154,
+        0.008887832638965571,
+        0.026826489876665627
+      ],
+      "upd_ci": [
+        -0.1342042755344418,
+        -0.14879604928359288,
+        -0.11896817868002188
+      ],
+      "gross_loss_reduction_ci": [
+        0.02346249555634554,
+        0.015389561841392917,
+        0.03219712137686615
+      ],
+      "repaired_answer_retention_ci": [
+        0.5614035087719298,
+        0.3636034255599473,
+        0.777833333333333
+      ]
+    },
+    "R3_minus_SFT": {
+      "standard_ci": [
+        0.015286171347316033,
+        0.006654451360212984,
+        0.024432602664609407
+      ],
+      "upd_ci": [
+        -0.2282264449722882,
+        -0.24549376362476227,
+        -0.2115371556072953
+      ],
+      "gross_loss_reduction_ci": [
+        0.013864201919658727,
+        0.0060415551263910666,
+        0.02211926078927616
+      ],
+      "repaired_answer_retention_ci": [
+        0.2982456140350877,
+        0.09084224598930482,
+        0.5172567733990148
+      ]
+    }
+  },
+  "training_config": {
+    "model": "EXPERIMENT_ROOT/mm_stage3/two_stage_20261108/sft/B1",
+    "manifest": "EXPERIMENT_ROOT/mm_stage3/manifests/T.jsonl",
+    "heldout": [
+      "EXPERIMENT_ROOT/mm_stage3/manifests/CM.jsonl",
+      "EXPERIMENT_ROOT/mm_stage3/manifests/E.jsonl"
+    ],
+    "seed": 42,
+    "epochs": 3,
+    "rows": 1354,
+    "images": 708,
+    "micro_batch": 1,
+    "effective_batch": 4,
+    "learning_rate": 4e-05,
+    "weight_decay": 0.0001,
+    "warmup_ratio": 0.03,
+    "warmup_steps": 30,
+    "total_steps": 1017,
+    "scheduler": "cosine",
+    "lora_r": 8,
+    "lora_alpha": 16,
+    "lora_dropout": 0.05,
+    "max_grad_norm": null,
+    "trainable_parameters": 14966784,
+    "gradient_checkpointing": true,
+    "dtype": "bfloat16",
+    "adapter_dtype": "torch.bfloat16",
+    "attention": "sdpa",
+    "image_processor": {
+      "size": {
+        "longest_edge": 12845056,
+        "shortest_edge": 3136
+      },
+      "do_convert_rgb": true,
+      "do_normalize": true,
+      "do_rescale": true,
+      "do_resize": true,
+      "image_mean": [
+        0.48145466,
+        0.4578275,
+        0.40821073
+      ],
+      "image_processor_type": "Qwen2VLImageProcessor",
+      "image_std": [
+        0.26862954,
+        0.26130258,
+        0.27577711
+      ],
+      "merge_size": 2,
+      "patch_size": 14,
+      "resample": 3,
+      "rescale_factor": 0.00392156862745098,
+      "temporal_patch_size": 2
+    },
+    "sequence_truncation": false,
+    "target": "correct option letter (NOTA for UPD) plus im_end",
+    "sampling": "shuffle 677 pairs; interleave UPD then Standard",
+    "training_objective": "ordinary token cross entropy; no CLIP projection",
+    "torch": "2.13.0+cu130",
+    "transformers": "5.17.0",
+    "peft": "0.21.2",
+    "gpu": "NVIDIA RTX PRO 5000 72GB Blackwell",
+    "gpu_memory_bytes": 76368052224
+  },
+  "protocol": {
+    "shared_base": "B1",
+    "data": "T: 1354 records",
+    "epochs": 3,
+    "seed": 42,
+    "evaluation": "historically exposed E; no evaluation-based tuning",
+    "output_format": "common option prompt and NOTA letter",
+    "relationship_to_EmbLoRA": "same B1/data/epochs/LoRA recipe; different answer format, no CLIP injection",
+    "bootstrap": "2000 paired image-cluster draws, seed 0"
+  }
+}

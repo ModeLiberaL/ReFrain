@@ -1,0 +1,409 @@
+{
+  "state": "complete",
+  "counts": {
+    "rows": 10678,
+    "standard": 5626,
+    "upd": 5052
+  },
+  "sft": {
+    "repairs": 57,
+    "loss": 29,
+    "net_correct_change": 28,
+    "repair_clusters": 28
+  },
+  "calibration": {
+    "R2_loss0": {
+      "budget": 0.0,
+      "threshold": -10.226138449867452,
+      "standard_count": 2406,
+      "lost_correct": 0
+    },
+    "R2_loss0.005": {
+      "budget": 0.005,
+      "threshold": -6.183404341319426,
+      "standard_count": 2406,
+      "lost_correct": 11
+    }
+  },
+  "arms": [
+    {
+      "arm": "R0",
+      "standard": 0.8672236046924992,
+      "upd": 0.5643309580364212,
+      "circular": {
+        "tasks": {
+          "mmupd_aad": {
+            "families": 574,
+            "standard": 0.8170731707317073,
+            "upd": 0.32578397212543553,
+            "dual": 0.3205574912891986
+          },
+          "mmupd_iasd": {
+            "families": 637,
+            "standard": 0.8006279434850864,
+            "upd": 0.49293563579277866,
+            "dual": 0.3893249607535322
+          },
+          "mmupd_ivqd": {
+            "families": 253,
+            "standard": 0.7984189723320159,
+            "upd": 0.5928853754940712,
+            "dual": 0.4980237154150198
+          }
+        },
+        "macro": {
+          "standard": 0.8053733621829364,
+          "upd": 0.4705349944707618,
+          "dual": 0.4026353891525835
+        }
+      },
+      "gross_loss": 57,
+      "repairs": 29,
+      "gross_loss_pp": 1.0131532172058302,
+      "new_repair_loss": 57,
+      "new_repair_loss_pp": 1.0131532172058302,
+      "old_correct_loss": 0,
+      "old_correct_loss_pp": 0.0,
+      "new_repair_retention": {
+        "retained": 0,
+        "denominator": 57,
+        "repair_clusters": 28,
+        "rate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "bootstrap_nonempty_draws": 2000
+      },
+      "std_change_ci": [
+        -0.004976892996800568,
+        -0.010203332396581347,
+        0.00017529441390050926
+      ],
+      "upd_change_ci": [
+        0.01801266825019794,
+        0.012439213176036714,
+        0.023830340595473308
+      ],
+      "passes_original_rule": null,
+      "end_to_end_std_change_ci": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "end_to_end_upd_change_ci": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "arm": "R1",
+      "standard": 0.8722004976892996,
+      "upd": 0.5463182897862233,
+      "circular": {
+        "tasks": {
+          "mmupd_aad": {
+            "families": 574,
+            "standard": 0.8292682926829268,
+            "upd": 0.28222996515679444,
+            "dual": 0.28222996515679444
+          },
+          "mmupd_iasd": {
+            "families": 637,
+            "standard": 0.8084772370486656,
+            "upd": 0.4662480376766091,
+            "dual": 0.37362637362637363
+          },
+          "mmupd_ivqd": {
+            "families": 253,
+            "standard": 0.8142292490118577,
+            "upd": 0.5928853754940712,
+            "dual": 0.5098814229249012
+          }
+        },
+        "macro": {
+          "standard": 0.8173249262478167,
+          "upd": 0.44712112610915816,
+          "dual": 0.38857925390268977
+        }
+      },
+      "gross_loss": 0,
+      "repairs": 0,
+      "gross_loss_pp": 0.0,
+      "new_repair_loss": 0,
+      "new_repair_loss_pp": 0.0,
+      "old_correct_loss": 0,
+      "old_correct_loss_pp": 0.0,
+      "new_repair_retention": {
+        "retained": 57,
+        "denominator": 57,
+        "repair_clusters": 28,
+        "rate": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "bootstrap_nonempty_draws": 2000
+      },
+      "std_change_ci": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "upd_change_ci": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passes_original_rule": null,
+      "end_to_end_std_change_ci": [
+        0.004976892996800568,
+        -0.00017529441390050948,
+        0.010203332396581341
+      ],
+      "end_to_end_upd_change_ci": [
+        -0.01801266825019794,
+        -0.02383034059547331,
+        -0.012439213176036718
+      ]
+    },
+    {
+      "arm": "R2_loss0",
+      "standard": 0.8722004976892996,
+      "upd": 0.6193586698337292,
+      "circular": {
+        "tasks": {
+          "mmupd_aad": {
+            "families": 574,
+            "standard": 0.8292682926829268,
+            "upd": 0.3832752613240418,
+            "dual": 0.38153310104529614
+          },
+          "mmupd_iasd": {
+            "families": 637,
+            "standard": 0.8084772370486656,
+            "upd": 0.5934065934065934,
+            "dual": 0.4913657770800628
+          },
+          "mmupd_ivqd": {
+            "families": 253,
+            "standard": 0.8142292490118577,
+            "upd": 0.6007905138339921,
+            "dual": 0.5138339920948617
+          }
+        },
+        "macro": {
+          "standard": 0.8173249262478167,
+          "upd": 0.5258241228548758,
+          "dual": 0.4622442900734069
+        }
+      },
+      "gross_loss": 0,
+      "repairs": 0,
+      "gross_loss_pp": 0.0,
+      "new_repair_loss": 0,
+      "new_repair_loss_pp": 0.0,
+      "old_correct_loss": 0,
+      "old_correct_loss_pp": 0.0,
+      "new_repair_retention": {
+        "retained": 57,
+        "denominator": 57,
+        "repair_clusters": 28,
+        "rate": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "bootstrap_nonempty_draws": 2000
+      },
+      "std_change_ci": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "upd_change_ci": [
+        0.07304038004750593,
+        0.06211955495079362,
+        0.08369396873889147
+      ],
+      "passes_original_rule": true,
+      "end_to_end_std_change_ci": [
+        0.004976892996800568,
+        -0.00017529441390050948,
+        0.010203332396581341
+      ],
+      "end_to_end_upd_change_ci": [
+        0.055027711797308,
+        0.04391729332506851,
+        0.06551452747593084
+      ]
+    },
+    {
+      "arm": "R2_loss0.005",
+      "standard": 0.8707785282616424,
+      "upd": 0.7404988123515439,
+      "circular": {
+        "tasks": {
+          "mmupd_aad": {
+            "families": 574,
+            "standard": 0.8240418118466899,
+            "upd": 0.5121951219512195,
+            "dual": 0.5017421602787456
+          },
+          "mmupd_iasd": {
+            "families": 637,
+            "standard": 0.8021978021978022,
+            "upd": 0.7896389324960753,
+            "dual": 0.6326530612244898
+          },
+          "mmupd_ivqd": {
+            "families": 253,
+            "standard": 0.8102766798418972,
+            "upd": 0.6284584980237155,
+            "dual": 0.5375494071146245
+          }
+        },
+        "macro": {
+          "standard": 0.8121720979621297,
+          "upd": 0.6434308508236701,
+          "dual": 0.5573148762059533
+        }
+      },
+      "gross_loss": 8,
+      "repairs": 0,
+      "gross_loss_pp": 0.14219694276573053,
+      "new_repair_loss": 2,
+      "new_repair_loss_pp": 0.03554923569143263,
+      "old_correct_loss": 6,
+      "old_correct_loss_pp": 0.10664770707429791,
+      "new_repair_retention": {
+        "retained": 55,
+        "denominator": 57,
+        "repair_clusters": 28,
+        "rate": 0.9649122807017544,
+        "ci95": [
+          0.8774872448979592,
+          1.0
+        ],
+        "bootstrap_nonempty_draws": 2000
+      },
+      "std_change_ci": [
+        -0.0014219694276573053,
+        -0.003022370264814155,
+        -0.00034339922922334146
+      ],
+      "upd_change_ci": [
+        0.19418052256532067,
+        0.17781477034518284,
+        0.21115911868588907
+      ],
+      "passes_original_rule": true,
+      "end_to_end_std_change_ci": [
+        0.0035549235691432635,
+        -0.0015856119336025373,
+        0.00876382003338618
+      ],
+      "end_to_end_upd_change_ci": [
+        0.17616785431512272,
+        0.16028120236756283,
+        0.19271713957801756
+      ]
+    },
+    {
+      "arm": "R3",
+      "standard": 0.8684678279416993,
+      "upd": 0.6464766429136976,
+      "circular": {
+        "tasks": {
+          "mmupd_aad": {
+            "families": 574,
+            "standard": 0.8170731707317073,
+            "upd": 0.3153310104529617,
+            "dual": 0.31010452961672474
+          },
+          "mmupd_iasd": {
+            "families": 637,
+            "standard": 0.7943485086342229,
+            "upd": 0.6530612244897959,
+            "dual": 0.5196232339089482
+          },
+          "mmupd_ivqd": {
+            "families": 253,
+            "standard": 0.8221343873517787,
+            "upd": 0.7193675889328063,
+            "dual": 0.6047430830039525
+          }
+        },
+        "macro": {
+          "standard": 0.8111853555725697,
+          "upd": 0.5625866079585213,
+          "dual": 0.4781569488432085
+        }
+      },
+      "gross_loss": 62,
+      "repairs": 41,
+      "gross_loss_pp": 1.1020263064344116,
+      "new_repair_loss": 17,
+      "new_repair_loss_pp": 0.3021685033771774,
+      "old_correct_loss": 45,
+      "old_correct_loss_pp": 0.7998578030572343,
+      "new_repair_retention": {
+        "retained": 40,
+        "denominator": 57,
+        "repair_clusters": 28,
+        "rate": 0.7017543859649122,
+        "ci95": [
+          0.4915179898899792,
+          0.8627518130539887
+        ],
+        "bootstrap_nonempty_draws": 2000
+      },
+      "std_change_ci": [
+        -0.0037326697476004265,
+        -0.00991295855508835,
+        0.002134013628053844
+      ],
+      "upd_change_ci": [
+        0.10015835312747427,
+        0.08827980551941382,
+        0.1122831137255834
+      ],
+      "passes_original_rule": true,
+      "end_to_end_std_change_ci": [
+        0.001244223249200142,
+        -0.005787196457489751,
+        0.008314690309153315
+      ],
+      "end_to_end_upd_change_ci": [
+        0.08214568487727633,
+        0.06998672053999702,
+        0.09414503093646728
+      ]
+    }
+  ],
+  "protocol": {
+    "reference": "R1, the shared answering-SFT checkpoint",
+    "threshold_grid": "T scores",
+    "threshold_constraint": "CM gross loss relative to R1",
+    "bootstrap_draws": 2000,
+    "bootstrap_seed": 0,
+    "bootstrap_unit": "image cluster",
+    "pass_standard_lower_bound": -0.01,
+    "pass_upd_lower_bound": 0.0,
+    "evaluation": "historically exposed E",
+    "training_seed": 42
+  },
+  "R2_vs_R3": {
+    "standard": [
+      0.0037326697476004265,
+      -0.0021340136280538474,
+      0.009912958555088346
+    ],
+    "upd": [
+      -0.02711797307996833,
+      -0.04070081501263674,
+      -0.013236998831357412
+    ]
+  }
+}

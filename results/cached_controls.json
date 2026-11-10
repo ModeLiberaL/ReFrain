@@ -1,0 +1,212 @@
+{
+  "status": "complete",
+  "scope": "post-SFT B1 cached component controls; common deterministic NOTA executor",
+  "selection": "C=1, MSP and negative entropy fixed; thresholds from T and CM only",
+  "evaluated_after_main_results": true,
+  "arms": [
+    {
+      "method": "LP_C1_shared_executor",
+      "budget": 0.0,
+      "threshold": -34.890148589299365,
+      "calibration_loss": 0.0,
+      "standard": 0.8722004976892996,
+      "upd": 0.5987727632620744,
+      "circular_dual": 0.44156172061034965,
+      "gross_loss": 0,
+      "repairs": 0,
+      "retained_repairs": 57,
+      "repair_total": 57,
+      "standard_change_ci": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "upd_change_ci": [
+        0.052454473475851145,
+        0.04394087978081585,
+        0.06128975412509016
+      ],
+      "passes_original_rule": true,
+      "ours_minus_control_standard_ci": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ours_minus_control_upd_ci": [
+        0.02058590657165479,
+        0.01577060592237563,
+        0.025781336558584004
+      ]
+    },
+    {
+      "method": "LP_C1_shared_executor",
+      "budget": 0.005,
+      "threshold": -18.530821434142677,
+      "calibration_loss": 0.004987531172069825,
+      "standard": 0.8698897973693566,
+      "upd": 0.7539588281868567,
+      "circular_dual": 0.5614187357862558,
+      "gross_loss": 13,
+      "repairs": 0,
+      "retained_repairs": 55,
+      "repair_total": 57,
+      "standard_change_ci": [
+        -0.002310700319943121,
+        -0.004574332978008266,
+        -0.0006330602528550562
+      ],
+      "upd_change_ci": [
+        0.2076405384006334,
+        0.19150359020941168,
+        0.22463293333776005
+      ],
+      "passes_original_rule": true,
+      "ours_minus_control_standard_ci": [
+        0.0008887308922858159,
+        -0.0005131221296974573,
+        0.0024976601980558834
+      ],
+      "ours_minus_control_upd_ci": [
+        -0.013460015835312747,
+        -0.01838602157200062,
+        -0.008587284417228563
+      ]
+    },
+    {
+      "method": "MSP",
+      "budget": 0.0,
+      "threshold": 0.29968125237432125,
+      "calibration_loss": 0.0,
+      "standard": 0.8722004976892996,
+      "upd": 0.5556215360253365,
+      "circular_dual": 0.38962582637783366,
+      "gross_loss": 0,
+      "repairs": 0,
+      "retained_repairs": 57,
+      "repair_total": 57,
+      "standard_change_ci": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "upd_change_ci": [
+        0.009303246239113222,
+        0.006050223639510994,
+        0.012823216281340345
+      ],
+      "passes_original_rule": true,
+      "ours_minus_control_standard_ci": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ours_minus_control_upd_ci": [
+        0.06373713380839272,
+        0.05272654370489174,
+        0.07497049444529573
+      ]
+    },
+    {
+      "method": "MSP",
+      "budget": 0.005,
+      "threshold": 0.3895565332930223,
+      "calibration_loss": 0.0029093931837073984,
+      "standard": 0.8697120511908994,
+      "upd": 0.5934283452098179,
+      "circular_dual": 0.39906359357957594,
+      "gross_loss": 14,
+      "repairs": 0,
+      "retained_repairs": 54,
+      "repair_total": 57,
+      "standard_change_ci": [
+        -0.002488446498400284,
+        -0.005316686368161778,
+        -0.000516784746961267
+      ],
+      "upd_change_ci": [
+        0.047110055423594616,
+        0.03995002810533013,
+        0.05534847074263601
+      ],
+      "passes_original_rule": true,
+      "ours_minus_control_standard_ci": [
+        0.001066477070742979,
+        -0.0015435374242668144,
+        0.004025480363609207
+      ],
+      "ours_minus_control_upd_ci": [
+        0.14707046714172606,
+        0.1317410634208689,
+        0.1633769253687402
+      ]
+    },
+    {
+      "method": "negative_entropy",
+      "budget": 0.0,
+      "threshold": "-inf",
+      "calibration_loss": 0.0,
+      "standard": 0.8722004976892996,
+      "upd": 0.5463182897862233,
+      "circular_dual": 0.38857925390268977,
+      "gross_loss": 0,
+      "repairs": 0,
+      "retained_repairs": 57,
+      "repair_total": 57,
+      "standard_change_ci": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "upd_change_ci": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passes_original_rule": false,
+      "ours_minus_control_standard_ci": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ours_minus_control_upd_ci": [
+        0.07304038004750593,
+        0.06211955495079362,
+        0.08369396873889147
+      ]
+    },
+    {
+      "method": "negative_entropy",
+      "budget": 0.005,
+      "threshold": -1.453924226003133,
+      "calibration_loss": 0.0033250207813798837,
+      "standard": 0.8716672591539282,
+      "upd": 0.5730403800475059,
+      "circular_dual": 0.3982879716859417,
+      "gross_loss": 3,
+      "repairs": 0,
+      "retained_repairs": 57,
+      "repair_total": 57,
+      "standard_change_ci": [
+        -0.0005332385353714896,
+        -0.001455917956181215,
+        0.0
+      ],
+      "upd_change_ci": [
+        0.02672209026128266,
+        0.0200747580951023,
+        0.03415031904025938
+      ],
+      "passes_original_rule": true,
+      "ours_minus_control_standard_ci": [
+        -0.0008887308922858159,
+        -0.002676614475217965,
+        0.0005448750123831852
+      ],
+      "ours_minus_control_upd_ci": [
+        0.167458432304038,
+        0.15216275184291014,
+        0.18389914578048452
+      ]
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "calibration": {
+    "R2_loss0": {
+      "budget": 0.0,
+      "threshold": -10.226138449867452,
+      "standard_count": 2406,
+      "lost_correct": 0
+    },
+    "R2_loss0.005": {
+      "budget": 0.005,
+      "threshold": -6.183404341319426,
+      "standard_count": 2406,
+      "lost_correct": 11
+    }
+  },
+  "generation": {
+    "do_sample": false,
+    "batch_size": 1,
+    "max_new_tokens": 1024,
+    "dtype": "bfloat16",
+    "attention": "sdpa"
+  },
+  "selection": "Fixed before independent inference; no retraining or recalibration"
+}

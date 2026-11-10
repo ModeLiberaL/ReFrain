@@ -1,0 +1,215 @@
+{
+  "feature": "logits",
+  "standardized": false,
+  "train_rows": 1354,
+  "train_clusters": 432,
+  "selected_C": 0.01,
+  "solver": "lbfgs",
+  "max_iter": 2000,
+  "tol": 0.0001,
+  "cv": [
+    {
+      "C": 0.01,
+      "mean_bce": 0.09093438746117179,
+      "fold_bce": [
+        0.10643822116381205,
+        0.04554277118648011,
+        0.10734958826932887,
+        0.08892446623733953,
+        0.10641689044889835
+      ],
+      "optimizer": [
+        {
+          "C": 0.01,
+          "iterations": 240,
+          "converged": true
+        },
+        {
+          "C": 0.01,
+          "iterations": 233,
+          "converged": true
+        },
+        {
+          "C": 0.01,
+          "iterations": 274,
+          "converged": true
+        },
+        {
+          "C": 0.01,
+          "iterations": 259,
+          "converged": true
+        },
+        {
+          "C": 0.01,
+          "iterations": 253,
+          "converged": true
+        }
+      ]
+    },
+    {
+      "C": 0.1,
+      "mean_bce": 0.13840459578475356,
+      "fold_bce": [
+        0.16839067281747508,
+        0.06135023686337663,
+        0.17441091301916456,
+        0.12754662579004986,
+        0.1603245304337017
+      ],
+      "optimizer": [
+        {
+          "C": 0.1,
+          "iterations": 264,
+          "converged": true
+        },
+        {
+          "C": 0.1,
+          "iterations": 247,
+          "converged": true
+        },
+        {
+          "C": 0.1,
+          "iterations": 181,
+          "converged": true
+        },
+        {
+          "C": 0.1,
+          "iterations": 234,
+          "converged": true
+        },
+        {
+          "C": 0.1,
+          "iterations": 175,
+          "converged": true
+        }
+      ]
+    },
+    {
+      "C": 1.0,
+      "mean_bce": 0.2501003292268045,
+      "fold_bce": [
+        0.3174611014318798,
+        0.12531041310307806,
+        0.2981464133810647,
+        0.24681855290055227,
+        0.2627651653174476
+      ],
+      "optimizer": [
+        {
+          "C": 1.0,
+          "iterations": 184,
+          "converged": true
+        },
+        {
+          "C": 1.0,
+          "iterations": 161,
+          "converged": true
+        },
+        {
+          "C": 1.0,
+          "iterations": 107,
+          "converged": true
+        },
+        {
+          "C": 1.0,
+          "iterations": 117,
+          "converged": true
+        },
+        {
+          "C": 1.0,
+          "iterations": 133,
+          "converged": true
+        }
+      ]
+    },
+    {
+      "C": 10.0,
+      "mean_bce": 0.555991061943551,
+      "fold_bce": [
+        0.7360317394664885,
+        0.24258896384002618,
+        0.6068591076166783,
+        0.3805564087429239,
+        0.813919090051638
+      ],
+      "optimizer": [
+        {
+          "C": 10.0,
+          "iterations": 119,
+          "converged": true
+        },
+        {
+          "C": 10.0,
+          "iterations": 103,
+          "converged": true
+        },
+        {
+          "C": 10.0,
+          "iterations": 77,
+          "converged": true
+        },
+        {
+          "C": 10.0,
+          "iterations": 111,
+          "converged": true
+        },
+        {
+          "C": 10.0,
+          "iterations": 61,
+          "converged": true
+        }
+      ]
+    },
+    {
+      "C": 100.0,
+      "mean_bce": 1.266962707940728,
+      "fold_bce": [
+        1.866213494888319,
+        0.5443894114135339,
+        1.0361222922359807,
+        1.4191091613582487,
+        1.468979179807557
+      ],
+      "optimizer": [
+        {
+          "C": 100.0,
+          "iterations": 110,
+          "converged": true
+        },
+        {
+          "C": 100.0,
+          "iterations": 80,
+          "converged": true
+        },
+        {
+          "C": 100.0,
+          "iterations": 52,
+          "converged": true
+        },
+        {
+          "C": 100.0,
+          "iterations": 99,
+          "converged": true
+        },
+        {
+          "C": 100.0,
+          "iterations": 67,
+          "converged": true
+        }
+      ]
+    }
+  ],
+  "outputs": {
+    "published_C1": {
+      "C": 1.0,
+      "iterations": 145,
+      "converged": true
+    },
+    "train_cv": {
+      "C": 0.01,
+      "iterations": 287,
+      "converged": true
+    }
+  },
+  "seconds": 637.6460249316879
+}

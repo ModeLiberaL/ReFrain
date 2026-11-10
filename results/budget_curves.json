@@ -1,0 +1,1047 @@
+{
+  "state": "complete",
+  "curves": [
+    {
+      "method": "logits_CV",
+      "cm_budget": 0.0,
+      "threshold": -10.226138449867452,
+      "cm_actual_loss": 0,
+      "standard": 0.8722004976892996,
+      "upd": 0.6193586698337292,
+      "e_loss": 0,
+      "retained_repairs": 57
+    },
+    {
+      "method": "logits_CV",
+      "cm_budget": 0.001,
+      "threshold": -8.5033339424433,
+      "cm_actual_loss": 2,
+      "standard": 0.8722004976892996,
+      "upd": 0.6682501979414094,
+      "e_loss": 0,
+      "retained_repairs": 57
+    },
+    {
+      "method": "logits_CV",
+      "cm_budget": 0.0025,
+      "threshold": -6.912675171474038,
+      "cm_actual_loss": 6,
+      "standard": 0.8713117667970138,
+      "upd": 0.7181314330958036,
+      "e_loss": 5,
+      "retained_repairs": 55
+    },
+    {
+      "method": "logits_CV",
+      "cm_budget": 0.005,
+      "threshold": -6.183404341319426,
+      "cm_actual_loss": 11,
+      "standard": 0.8707785282616424,
+      "upd": 0.7404988123515439,
+      "e_loss": 8,
+      "retained_repairs": 55
+    },
+    {
+      "method": "logits_CV",
+      "cm_budget": 0.01,
+      "threshold": -3.336540478560876,
+      "cm_actual_loss": 23,
+      "standard": 0.8597582651972983,
+      "upd": 0.828978622327791,
+      "e_loss": 70,
+      "retained_repairs": 52
+    },
+    {
+      "method": "logits_C1",
+      "cm_budget": 0.0,
+      "threshold": -34.890148589299365,
+      "cm_actual_loss": 0,
+      "standard": 0.8722004976892996,
+      "upd": 0.5987727632620744,
+      "e_loss": 0,
+      "retained_repairs": 57
+    },
+    {
+      "method": "logits_C1",
+      "cm_budget": 0.001,
+      "threshold": -28.166207772623437,
+      "cm_actual_loss": 1,
+      "standard": 0.8716672591539282,
+      "upd": 0.6508313539192399,
+      "e_loss": 3,
+      "retained_repairs": 57
+    },
+    {
+      "method": "logits_C1",
+      "cm_budget": 0.0025,
+      "threshold": -22.99880212338101,
+      "cm_actual_loss": 6,
+      "standard": 0.8709562744400995,
+      "upd": 0.7052652414885194,
+      "e_loss": 7,
+      "retained_repairs": 55
+    },
+    {
+      "method": "logits_C1",
+      "cm_budget": 0.005,
+      "threshold": -18.530821434142677,
+      "cm_actual_loss": 12,
+      "standard": 0.8698897973693566,
+      "upd": 0.7539588281868567,
+      "e_loss": 13,
+      "retained_repairs": 55
+    },
+    {
+      "method": "logits_C1",
+      "cm_budget": 0.01,
+      "threshold": -12.606546979479246,
+      "cm_actual_loss": 24,
+      "standard": 0.8608247422680413,
+      "upd": 0.8093824228028503,
+      "e_loss": 64,
+      "retained_repairs": 54
+    },
+    {
+      "method": "BICR",
+      "cm_budget": 0.0,
+      "threshold": 0.0003638867347035557,
+      "cm_actual_loss": 0,
+      "standard": 0.8722004976892996,
+      "upd": 0.5548297703879652,
+      "e_loss": 0,
+      "retained_repairs": 57
+    },
+    {
+      "method": "BICR",
+      "cm_budget": 0.001,
+      "threshold": 0.0003638867347035557,
+      "cm_actual_loss": 0,
+      "standard": 0.8722004976892996,
+      "upd": 0.5548297703879652,
+      "e_loss": 0,
+      "retained_repairs": 57
+    },
+    {
+      "method": "BICR",
+      "cm_budget": 0.0025,
+      "threshold": 0.000609518145211041,
+      "cm_actual_loss": 3,
+      "standard": 0.8716672591539282,
+      "upd": 0.5639350752177356,
+      "e_loss": 3,
+      "retained_repairs": 57
+    },
+    {
+      "method": "BICR",
+      "cm_budget": 0.005,
+      "threshold": 0.001144201378338039,
+      "cm_actual_loss": 11,
+      "standard": 0.870423035904728,
+      "upd": 0.5823436262866192,
+      "e_loss": 10,
+      "retained_repairs": 57
+    },
+    {
+      "method": "BICR",
+      "cm_budget": 0.01,
+      "threshold": 0.0037243016995489597,
+      "cm_actual_loss": 22,
+      "standard": 0.8624244578741557,
+      "upd": 0.6456848772763262,
+      "e_loss": 55,
+      "retained_repairs": 52
+    },
+    {
+      "method": "ACR_MCQ_scaled",
+      "cm_budget": 0.0,
+      "threshold": 0.0011514362413436174,
+      "cm_actual_loss": 0,
+      "standard": 0.8722004976892996,
+      "upd": 0.5797703879651623,
+      "e_loss": 0,
+      "retained_repairs": 57
+    },
+    {
+      "method": "ACR_MCQ_scaled",
+      "cm_budget": 0.001,
+      "threshold": 0.0023220055736601353,
+      "cm_actual_loss": 1,
+      "standard": 0.8713117667970138,
+      "upd": 0.5948139350752177,
+      "e_loss": 5,
+      "retained_repairs": 57
+    },
+    {
+      "method": "ACR_MCQ_scaled",
+      "cm_budget": 0.0025,
+      "threshold": 0.018921416252851486,
+      "cm_actual_loss": 6,
+      "standard": 0.8686455741201564,
+      "upd": 0.6579572446555819,
+      "e_loss": 20,
+      "retained_repairs": 53
+    },
+    {
+      "method": "ACR_MCQ_scaled",
+      "cm_budget": 0.005,
+      "threshold": 0.02868751436471939,
+      "cm_actual_loss": 10,
+      "standard": 0.8658016352648418,
+      "upd": 0.6720110847189232,
+      "e_loss": 36,
+      "retained_repairs": 53
+    },
+    {
+      "method": "ACR_MCQ_scaled",
+      "cm_budget": 0.01,
+      "threshold": 0.07180683314800262,
+      "cm_actual_loss": 15,
+      "standard": 0.8622467116956986,
+      "upd": 0.7115993665874901,
+      "e_loss": 56,
+      "retained_repairs": 50
+    }
+  ],
+  "tasks": [
+    {
+      "task": "mmupd_aad",
+      "method": "B1",
+      "standard_count": 2226,
+      "upd_count": 1652,
+      "standard": 0.8845462713387242,
+      "upd": 0.3601694915254237,
+      "lost": 0,
+      "repaired": 0,
+      "retained_repairs": 21,
+      "repair_total": 21,
+      "standard_delta_ci": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "upd_delta_ci": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "task": "mmupd_aad",
+      "method": "CV_0",
+      "standard_count": 2226,
+      "upd_count": 1652,
+      "standard": 0.8845462713387242,
+      "upd": 0.4600484261501211,
+      "lost": 0,
+      "repaired": 0,
+      "retained_repairs": 21,
+      "repair_total": 21,
+      "standard_delta_ci": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "upd_delta_ci": [
+        0.09987893462469734,
+        0.07873441428617343,
+        0.12063969732589605
+      ]
+    },
+    {
+      "task": "mmupd_aad",
+      "method": "CV_0.5",
+      "standard_count": 2226,
+      "upd_count": 1652,
+      "standard": 0.8831985624438454,
+      "upd": 0.6047215496368039,
+      "lost": 3,
+      "repaired": 0,
+      "retained_repairs": 20,
+      "repair_total": 21,
+      "standard_delta_ci": [
+        -0.0013477088948787063,
+        -0.0032393536699748125,
+        0.0
+      ],
+      "upd_delta_ci": [
+        0.24455205811138014,
+        0.21391125847332745,
+        0.2754579338944962
+      ]
+    },
+    {
+      "task": "mmupd_aad",
+      "method": "EmbLoRA",
+      "standard_count": 2226,
+      "upd_count": 1652,
+      "standard": 0.8800539083557951,
+      "upd": 0.3880145278450363,
+      "lost": 25,
+      "repaired": 15,
+      "retained_repairs": 14,
+      "repair_total": 21,
+      "standard_delta_ci": [
+        -0.004492362982929021,
+        -0.011175931731835642,
+        0.0018459338404073194
+      ],
+      "upd_delta_ci": [
+        0.02784503631961259,
+        0.015605494534262302,
+        0.041445035655874644
+      ]
+    },
+    {
+      "task": "mmupd_aad",
+      "method": "ordinary_SFT",
+      "standard_count": 2226,
+      "upd_count": 1652,
+      "standard": 0.8638814016172507,
+      "upd": 0.8038740920096852,
+      "lost": 58,
+      "repaired": 12,
+      "retained_repairs": 7,
+      "repair_total": 21,
+      "standard_delta_ci": [
+        -0.020664869721473494,
+        -0.031029317844829127,
+        -0.011190439107435423
+      ],
+      "upd_delta_ci": [
+        0.4437046004842615,
+        0.4074074074074074,
+        0.4802327240306769
+      ]
+    },
+    {
+      "task": "mmupd_aad",
+      "method": "BICR_0.5",
+      "standard_count": 2226,
+      "upd_count": 1652,
+      "standard": 0.8827493261455526,
+      "upd": 0.4152542372881356,
+      "lost": 4,
+      "repaired": 0,
+      "retained_repairs": 21,
+      "repair_total": 21,
+      "standard_delta_ci": [
+        -0.0017969451931716084,
+        -0.0037420780410581684,
+        -0.0004310252012236776
+      ],
+      "upd_delta_ci": [
+        0.05508474576271186,
+        0.042446800753819576,
+        0.0696853179686401
+      ]
+    },
+    {
+      "task": "mmupd_aad",
+      "method": "ACR_scaled_0.5",
+      "standard_count": 2226,
+      "upd_count": 1652,
+      "standard": 0.8769092542677448,
+      "upd": 0.6119854721549637,
+      "lost": 17,
+      "repaired": 0,
+      "retained_repairs": 19,
+      "repair_total": 21,
+      "standard_delta_ci": [
+        -0.0076370170709793355,
+        -0.011417618216908985,
+        -0.004051955787178234
+      ],
+      "upd_delta_ci": [
+        0.25181598062953997,
+        0.2252140703304481,
+        0.2795434172361902
+      ]
+    },
+    {
+      "task": "mmupd_aad",
+      "method": "CLIP_CV_0.5",
+      "standard_count": 2226,
+      "upd_count": 1652,
+      "standard": 0.8827493261455526,
+      "upd": 0.38619854721549635,
+      "lost": 4,
+      "repaired": 0,
+      "retained_repairs": 21,
+      "repair_total": 21,
+      "standard_delta_ci": [
+        -0.0017969451931716084,
+        -0.004203692265383894,
+        0.0
+      ],
+      "upd_delta_ci": [
+        0.02602905569007264,
+        0.014796547472256474,
+        0.03848508830602543
+      ]
+    },
+    {
+      "task": "mmupd_aad",
+      "method": "C1_0.5",
+      "standard_count": 2226,
+      "upd_count": 1652,
+      "standard": 0.8823000898472596,
+      "upd": 0.6319612590799032,
+      "lost": 5,
+      "repaired": 0,
+      "retained_repairs": 20,
+      "repair_total": 21,
+      "standard_delta_ci": [
+        -0.0022461814914645105,
+        -0.005062219343877215,
+        -0.00042936882782310007
+      ],
+      "upd_delta_ci": [
+        0.2717917675544794,
+        0.24027108610771197,
+        0.3015134855124797
+      ]
+    },
+    {
+      "task": "mmupd_iasd",
+      "method": "B1",
+      "standard_count": 2455,
+      "upd_count": 2455,
+      "standard": 0.8647657841140529,
+      "upd": 0.6342158859470468,
+      "lost": 0,
+      "repaired": 0,
+      "retained_repairs": 23,
+      "repair_total": 23,
+      "standard_delta_ci": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "upd_delta_ci": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "task": "mmupd_iasd",
+      "method": "CV_0",
+      "standard_count": 2455,
+      "upd_count": 2455,
+      "standard": 0.8647657841140529,
+      "upd": 0.7156822810590632,
+      "lost": 0,
+      "repaired": 0,
+      "retained_repairs": 23,
+      "repair_total": 23,
+      "standard_delta_ci": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "upd_delta_ci": [
+        0.0814663951120163,
+        0.06655287906567055,
+        0.0968153199029812
+      ]
+    },
+    {
+      "task": "mmupd_iasd",
+      "method": "CV_0.5",
+      "standard_count": 2455,
+      "upd_count": 2455,
+      "standard": 0.8631364562118127,
+      "upd": 0.8537678207739308,
+      "lost": 4,
+      "repaired": 0,
+      "retained_repairs": 22,
+      "repair_total": 23,
+      "standard_delta_ci": [
+        -0.001629327902240326,
+        -0.003518592137576836,
+        -0.0003892451692539412
+      ],
+      "upd_delta_ci": [
+        0.2195519348268839,
+        0.19511786856742142,
+        0.2440339698673032
+      ]
+    },
+    {
+      "task": "mmupd_iasd",
+      "method": "EmbLoRA",
+      "standard_count": 2455,
+      "upd_count": 2455,
+      "standard": 0.8586558044806517,
+      "upd": 0.7735234215885947,
+      "lost": 32,
+      "repaired": 17,
+      "retained_repairs": 15,
+      "repair_total": 23,
+      "standard_delta_ci": [
+        -0.006109979633401222,
+        -0.012868761067093408,
+        0.0
+      ],
+      "upd_delta_ci": [
+        0.13930753564154785,
+        0.12091208133188701,
+        0.15833627840659453
+      ]
+    },
+    {
+      "task": "mmupd_iasd",
+      "method": "ordinary_SFT",
+      "standard_count": 2455,
+      "upd_count": 2455,
+      "standard": 0.8423625254582485,
+      "upd": 0.9409368635437881,
+      "lost": 70,
+      "repaired": 15,
+      "retained_repairs": 8,
+      "repair_total": 23,
+      "standard_delta_ci": [
+        -0.02240325865580448,
+        -0.03278025304401061,
+        -0.012909017610183803
+      ],
+      "upd_delta_ci": [
+        0.30672097759674133,
+        0.2776369021103335,
+        0.33556674182350477
+      ]
+    },
+    {
+      "task": "mmupd_iasd",
+      "method": "BICR_0.5",
+      "standard_count": 2455,
+      "upd_count": 2455,
+      "standard": 0.8623217922606925,
+      "upd": 0.6708757637474542,
+      "lost": 6,
+      "repaired": 0,
+      "retained_repairs": 23,
+      "repair_total": 23,
+      "standard_delta_ci": [
+        -0.002443991853360489,
+        -0.0049204032336376,
+        -0.0004195691413596066
+      ],
+      "upd_delta_ci": [
+        0.03665987780040733,
+        0.026489481971389093,
+        0.04789517141846088
+      ]
+    },
+    {
+      "task": "mmupd_iasd",
+      "method": "ACR_scaled_0.5",
+      "standard_count": 2455,
+      "upd_count": 2455,
+      "standard": 0.8574338085539714,
+      "upd": 0.7124236252545825,
+      "lost": 18,
+      "repaired": 0,
+      "retained_repairs": 21,
+      "repair_total": 23,
+      "standard_delta_ci": [
+        -0.007331975560081467,
+        -0.010922439125336277,
+        -0.004035431148949465
+      ],
+      "upd_delta_ci": [
+        0.07820773930753565,
+        0.0644176584564548,
+        0.09237176291423907
+      ]
+    },
+    {
+      "task": "mmupd_iasd",
+      "method": "CLIP_CV_0.5",
+      "standard_count": 2455,
+      "upd_count": 2455,
+      "standard": 0.8631364562118127,
+      "upd": 0.6374745417515275,
+      "lost": 4,
+      "repaired": 0,
+      "retained_repairs": 23,
+      "repair_total": 23,
+      "standard_delta_ci": [
+        -0.001629327902240326,
+        -0.003753599500002447,
+        0.0
+      ],
+      "upd_delta_ci": [
+        0.003258655804480652,
+        0.00039385584875935406,
+        0.007038355923689852
+      ]
+    },
+    {
+      "task": "mmupd_iasd",
+      "method": "C1_0.5",
+      "standard_count": 2455,
+      "upd_count": 2455,
+      "standard": 0.8619144602851324,
+      "upd": 0.865173116089613,
+      "lost": 7,
+      "repaired": 0,
+      "retained_repairs": 22,
+      "repair_total": 23,
+      "standard_delta_ci": [
+        -0.0028513238289205704,
+        -0.005848353291359752,
+        -0.0004309836314146662
+      ],
+      "upd_delta_ci": [
+        0.2309572301425662,
+        0.20527780057389622,
+        0.25575748065147275
+      ]
+    },
+    {
+      "task": "mmupd_ivqd",
+      "method": "B1",
+      "standard_count": 945,
+      "upd_count": 945,
+      "standard": 0.8624338624338624,
+      "upd": 0.6433862433862434,
+      "lost": 0,
+      "repaired": 0,
+      "retained_repairs": 13,
+      "repair_total": 13,
+      "standard_delta_ci": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "upd_delta_ci": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "task": "mmupd_ivqd",
+      "method": "CV_0",
+      "standard_count": 945,
+      "upd_count": 945,
+      "standard": 0.8624338624338624,
+      "upd": 0.6476190476190476,
+      "lost": 0,
+      "repaired": 0,
+      "retained_repairs": 13,
+      "repair_total": 13,
+      "standard_delta_ci": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "upd_delta_ci": [
+        0.004232804232804233,
+        0.0009550643128535568,
+        0.00879145057362879
+      ]
+    },
+    {
+      "task": "mmupd_ivqd",
+      "method": "CV_0.5",
+      "standard_count": 945,
+      "upd_count": 945,
+      "standard": 0.8613756613756614,
+      "upd": 0.6835978835978836,
+      "lost": 1,
+      "repaired": 0,
+      "retained_repairs": 13,
+      "repair_total": 13,
+      "standard_delta_ci": [
+        -0.0010582010582010583,
+        -0.003659154202039258,
+        0.0
+      ],
+      "upd_delta_ci": [
+        0.04021164021164021,
+        0.023436357821637426,
+        0.06015056131452892
+      ]
+    },
+    {
+      "task": "mmupd_ivqd",
+      "method": "EmbLoRA",
+      "standard_count": 945,
+      "upd_count": 945,
+      "standard": 0.8666666666666667,
+      "upd": 0.7682539682539683,
+      "lost": 5,
+      "repaired": 9,
+      "retained_repairs": 11,
+      "repair_total": 13,
+      "standard_delta_ci": [
+        0.004232804232804233,
+        -0.00622586242179098,
+        0.01470755347593582
+      ],
+      "upd_delta_ci": [
+        0.12486772486772486,
+        0.0905824280931885,
+        0.15995879772701654
+      ]
+    },
+    {
+      "task": "mmupd_ivqd",
+      "method": "ordinary_SFT",
+      "standard_count": 945,
+      "upd_count": 945,
+      "standard": 0.8560846560846561,
+      "upd": 0.8264550264550264,
+      "lost": 12,
+      "repaired": 6,
+      "retained_repairs": 8,
+      "repair_total": 13,
+      "standard_delta_ci": [
+        -0.006349206349206349,
+        -0.017835433033950184,
+        0.003958242628660751
+      ],
+      "upd_delta_ci": [
+        0.18306878306878308,
+        0.13988378673349772,
+        0.22494941721404466
+      ]
+    },
+    {
+      "task": "mmupd_ivqd",
+      "method": "BICR_0.5",
+      "standard_count": 945,
+      "upd_count": 945,
+      "standard": 0.8624338624338624,
+      "upd": 0.6444444444444445,
+      "lost": 0,
+      "repaired": 0,
+      "retained_repairs": 13,
+      "repair_total": 13,
+      "standard_delta_ci": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "upd_delta_ci": [
+        0.0010582010582010583,
+        0.0,
+        0.0035717485919098805
+      ]
+    },
+    {
+      "task": "mmupd_ivqd",
+      "method": "ACR_scaled_0.5",
+      "standard_count": 945,
+      "upd_count": 945,
+      "standard": 0.8613756613756614,
+      "upd": 0.671957671957672,
+      "lost": 1,
+      "repaired": 0,
+      "retained_repairs": 13,
+      "repair_total": 13,
+      "standard_delta_ci": [
+        -0.0010582010582010583,
+        -0.003703818156846587,
+        0.0
+      ],
+      "upd_delta_ci": [
+        0.02857142857142857,
+        0.016777779614507222,
+        0.04144113442777564
+      ]
+    },
+    {
+      "task": "mmupd_ivqd",
+      "method": "CLIP_CV_0.5",
+      "standard_count": 945,
+      "upd_count": 945,
+      "standard": 0.8624338624338624,
+      "upd": 0.6941798941798942,
+      "lost": 0,
+      "repaired": 0,
+      "retained_repairs": 13,
+      "repair_total": 13,
+      "standard_delta_ci": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "upd_delta_ci": [
+        0.050793650793650794,
+        0.028420358363044313,
+        0.07627315910740776
+      ]
+    },
+    {
+      "task": "mmupd_ivqd",
+      "method": "C1_0.5",
+      "standard_count": 945,
+      "upd_count": 945,
+      "standard": 0.8613756613756614,
+      "upd": 0.6783068783068783,
+      "lost": 1,
+      "repaired": 0,
+      "retained_repairs": 13,
+      "repair_total": 13,
+      "standard_delta_ci": [
+        -0.0010582010582010583,
+        -0.003659154202039258,
+        0.0
+      ],
+      "upd_delta_ci": [
+        0.03492063492063492,
+        0.020696801643787472,
+        0.052125478673585114
+      ]
+    }
+  ],
+  "examples": [
+    {
+      "category": "EmbLoRA loses a new repair retained by CV",
+      "row": {
+        "sid": "E/opt/mmupd/aad/option/standard/1000629",
+        "split": "E",
+        "task": "mmupd_aad",
+        "type": "standard",
+        "family": 629,
+        "index": 1000629,
+        "cluster": 629,
+        "x2_fold": "heldout",
+        "image": "mm_stage3/manifests/images/mmupd_aad_option_standard_1000629.img",
+        "prompt": "Approximately what proportion of the picture is occupied by the elephant in the image?\nA. 0.3\nB. 0.8\nC. 1\nD. 0.5\nE. None of the above\nAnswer with the option's letter from the given choices directly.",
+        "display": [
+          [
+            "A",
+            "0.3"
+          ],
+          [
+            "B",
+            "0.8"
+          ],
+          [
+            "C",
+            "1"
+          ],
+          [
+            "D",
+            "0.5"
+          ],
+          [
+            "E",
+            "None of the above"
+          ]
+        ],
+        "gold": "A",
+        "nota": "E"
+      },
+      "outcomes": {
+        "B1": true,
+        "CV_0": true,
+        "CV_0.5": true,
+        "EmbLoRA": false,
+        "ordinary_SFT": false,
+        "BICR_0.5": true,
+        "ACR_scaled_0.5": true,
+        "CLIP_CV_0.5": true,
+        "C1_0.5": true
+      }
+    },
+    {
+      "category": "SFT loses a new repair retained by CV",
+      "row": {
+        "sid": "E/opt/mmupd/aad/option/standard/1000312",
+        "split": "E",
+        "task": "mmupd_aad",
+        "type": "standard",
+        "family": 312,
+        "index": 1000312,
+        "cluster": 312,
+        "x2_fold": "heldout",
+        "image": "mm_stage3/manifests/images/mmupd_aad_option_standard_1000312.img",
+        "prompt": "The diagram below is a model of two solutions. Each pink ball represents one particle of solute.\nWhich solution has a higher concentration of pink particles?\nA. Solution B\nB. neither; their concentrations are the same\nC. Solution A\nD. None of the above\nAnswer with the option's letter from the given choices directly.",
+        "display": [
+          [
+            "A",
+            "Solution B"
+          ],
+          [
+            "B",
+            "neither; their concentrations are the same"
+          ],
+          [
+            "C",
+            "Solution A"
+          ],
+          [
+            "D",
+            "None of the above"
+          ]
+        ],
+        "gold": "A",
+        "nota": "D"
+      },
+      "outcomes": {
+        "B1": true,
+        "CV_0": true,
+        "CV_0.5": true,
+        "EmbLoRA": true,
+        "ordinary_SFT": false,
+        "BICR_0.5": true,
+        "ACR_scaled_0.5": true,
+        "CLIP_CV_0.5": true,
+        "C1_0.5": true
+      }
+    },
+    {
+      "category": "SFT repairs a B1 Standard error",
+      "row": {
+        "sid": "E/opt/mmupd/aad/option/standard/1000009",
+        "split": "E",
+        "task": "mmupd_aad",
+        "type": "standard",
+        "family": 9,
+        "index": 1000009,
+        "cluster": 9,
+        "x2_fold": "heldout",
+        "image": "mm_stage3/manifests/images/mmupd_aad_option_standard_1000009.img",
+        "prompt": "What is correct Python code to generate the content of the image?\nA. x = lambda a, b: a * b\\nprint(x(5, 6))\\n\nB. fruits = [\"apple\", \"banana\", \"cherry\"]\\nfor x in fruits:\\n  print(x)\nC. mystr = \"banana\"\\nmyit = iter(mystr)\\n\\nprint(next(myit))\\nprint(next(myit))\\nprint(next(myit))\\nprint(next(myit))\\nprint(next(myit))\\nprint(next(myit))\nD. i = 1\\nwhile i < 6:\\n  print(i)\\n  i += 1\\n\nE. None of the above\nAnswer with the option's letter from the given choices directly.",
+        "display": [
+          [
+            "A",
+            "x = lambda a, b: a * b\\nprint(x(5, 6))\\n"
+          ],
+          [
+            "B",
+            "fruits = [\"apple\", \"banana\", \"cherry\"]\\nfor x in fruits:\\n  print(x)"
+          ],
+          [
+            "C",
+            "mystr = \"banana\"\\nmyit = iter(mystr)\\n\\nprint(next(myit))\\nprint(next(myit))\\nprint(next(myit))\\nprint(next(myit))\\nprint(next(myit))\\nprint(next(myit))"
+          ],
+          [
+            "D",
+            "i = 1\\nwhile i < 6:\\n  print(i)\\n  i += 1\\n"
+          ],
+          [
+            "E",
+            "None of the above"
+          ]
+        ],
+        "gold": "C",
+        "nota": "E"
+      },
+      "outcomes": {
+        "B1": false,
+        "CV_0": false,
+        "CV_0.5": false,
+        "EmbLoRA": true,
+        "ordinary_SFT": true,
+        "BICR_0.5": false,
+        "ACR_scaled_0.5": false,
+        "CLIP_CV_0.5": false,
+        "C1_0.5": false
+      }
+    },
+    {
+      "category": "SFT detects UPD missed by CV",
+      "row": {
+        "sid": "E/opt/mmupd/aad/option/upd/1000174",
+        "split": "E",
+        "task": "mmupd_aad",
+        "type": "upd",
+        "family": 174,
+        "index": 1000174,
+        "cluster": 174,
+        "x2_fold": "heldout",
+        "image": "mm_stage3/manifests/images/mmupd_aad_option_upd_1000174.img",
+        "prompt": "Based on the image, how is the woman in the picture protecting herself from the rain?\nA. The woman is using a newspaper to cover her head from the rain.\nB. The woman is wearing a raincoat to protect herself from the rain.\nC. The woman is standing under a roof to avoid the rain.\nD. None of the above\nAnswer with the option's letter from the given choices directly.",
+        "display": [
+          [
+            "A",
+            "The woman is using a newspaper to cover her head from the rain."
+          ],
+          [
+            "B",
+            "The woman is wearing a raincoat to protect herself from the rain."
+          ],
+          [
+            "C",
+            "The woman is standing under a roof to avoid the rain."
+          ],
+          [
+            "D",
+            "None of the above"
+          ]
+        ],
+        "gold": "D",
+        "nota": "D"
+      },
+      "outcomes": {
+        "B1": false,
+        "CV_0": false,
+        "CV_0.5": false,
+        "EmbLoRA": false,
+        "ordinary_SFT": true,
+        "BICR_0.5": false,
+        "ACR_scaled_0.5": false,
+        "CLIP_CV_0.5": false,
+        "C1_0.5": false
+      }
+    },
+    {
+      "category": "CV detects UPD missed by EmbLoRA",
+      "row": {
+        "sid": "E/opt/mmupd/aad/option/upd/1000",
+        "split": "E",
+        "task": "mmupd_aad",
+        "type": "upd",
+        "family": 1000,
+        "index": 1000,
+        "cluster": 1000,
+        "x2_fold": "heldout",
+        "image": "mm_stage3/manifests/images/mmupd_aad_option_upd_1000.img",
+        "prompt": "Where is the zebra\nA. It is on the left\nB. It is on the top\nC. It is on the bottom\nD. None of the above\nAnswer with the option's letter from the given choices directly.",
+        "display": [
+          [
+            "A",
+            "It is on the left"
+          ],
+          [
+            "B",
+            "It is on the top"
+          ],
+          [
+            "C",
+            "It is on the bottom"
+          ],
+          [
+            "D",
+            "None of the above"
+          ]
+        ],
+        "gold": "D",
+        "nota": "D"
+      },
+      "outcomes": {
+        "B1": false,
+        "CV_0": false,
+        "CV_0.5": true,
+        "EmbLoRA": false,
+        "ordinary_SFT": true,
+        "BICR_0.5": false,
+        "ACR_scaled_0.5": true,
+        "CLIP_CV_0.5": false,
+        "C1_0.5": true
+      }
+    }
+  ],
+  "protocol": "Additional descriptive analysis; T candidates and CM constraints only; E never selects curve thresholds",
+  "denominators": {
+    "cm_standard": 2406,
+    "e_standard": 5626,
+    "repairs": 57
+  }
+}

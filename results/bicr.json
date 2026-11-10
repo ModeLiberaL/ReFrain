@@ -1,0 +1,151 @@
+{
+  "state": "complete",
+  "fit": {
+    "method": "BICR",
+    "base": "shared B1",
+    "labels": "B1 actual response correctness, including correct UPD refusal",
+    "selection": "T image-cluster 80/20 split; 50 Optuna trials; AUROC/ECE composite; full-T refit",
+    "seed": 42,
+    "trials": 50,
+    "epochs": 79,
+    "params": {
+      "layers": "512",
+      "dropout": 0.3,
+      "learning_rate": 0.00017079152156140108,
+      "weight_decay": 0.0004377323135563542,
+      "beta_brier": 0.29550664370311563,
+      "lambda_rank": 0.016519726719673132,
+      "margin": 0.17243228642531114
+    },
+    "validation_score": 0.9885827291194325,
+    "train_rows": 1074,
+    "validation_rows": 280,
+    "correctness_metrics": {
+      "T": {
+        "auroc": 0.9994057425276536,
+        "ece": 0.0146994375605879,
+        "brier": 0.0069753811694681644
+      },
+      "CM": {
+        "auroc": 0.9181207506853384,
+        "ece": 0.10660261885742861,
+        "brier": 0.12736009061336517
+      },
+      "E": {
+        "auroc": 0.9037748939944,
+        "ece": 0.12092128936756048,
+        "brier": 0.1440575122833252
+      }
+    },
+    "training_seconds": 2641.34402012825,
+    "source": "https://github.com/Ledengary/BICR",
+    "adaptation": "Qwen2.5-VL-3B B1, T1354, one seed; paper layer candidates including 128,64; common NOTA executor"
+  },
+  "arms": [
+    {
+      "method": "BICR_common_NOTA",
+      "point": "default_threshold",
+      "budget": null,
+      "threshold": 0.5,
+      "calibration_lost": 422,
+      "standard": 0.6681478848204764,
+      "upd": 0.9519002375296912,
+      "circular_dual": 0.47811331222935527,
+      "gross_loss": 1148,
+      "repairs": 0,
+      "retained_repairs": 22,
+      "repair_total": 57,
+      "standard_change_ci": [
+        -0.2040526128688233,
+        -0.22923294629898405,
+        -0.18087530444466576
+      ],
+      "upd_change_ci": [
+        0.40558194774346795,
+        0.3813098972375189,
+        0.42941454167256893
+      ],
+      "passes_original_rule": false,
+      "ours_half_percent_minus_BICR_standard_ci": [
+        0.20263064344116602,
+        0.17955818105784305,
+        0.2277580971248126
+      ],
+      "ours_half_percent_minus_BICR_upd_ci": [
+        -0.21140142517814728,
+        -0.23204786999316745,
+        -0.19006514070571998
+      ]
+    },
+    {
+      "method": "BICR_common_NOTA",
+      "point": "loss_0.0",
+      "budget": 0.0,
+      "threshold": 0.0003638867347035557,
+      "calibration_lost": 0,
+      "standard": 0.8722004976892996,
+      "upd": 0.5548297703879652,
+      "circular_dual": 0.3901491126154057,
+      "gross_loss": 0,
+      "repairs": 0,
+      "retained_repairs": 57,
+      "repair_total": 57,
+      "standard_change_ci": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "upd_change_ci": [
+        0.008511480601741884,
+        0.005527124910923139,
+        0.012012665886301482
+      ],
+      "passes_original_rule": true,
+      "ours_half_percent_minus_BICR_standard_ci": [
+        -0.0014219694276573053,
+        -0.003022370264814155,
+        -0.00034339922922334146
+      ],
+      "ours_half_percent_minus_BICR_upd_ci": [
+        0.18566904196357878,
+        0.16934482232298026,
+        0.2021884700261907
+      ]
+    },
+    {
+      "method": "BICR_common_NOTA",
+      "point": "loss_0.005",
+      "budget": 0.005,
+      "threshold": 0.001144201378338039,
+      "calibration_lost": 11,
+      "standard": 0.870423035904728,
+      "upd": 0.5823436262866192,
+      "circular_dual": 0.39299527922463845,
+      "gross_loss": 10,
+      "repairs": 0,
+      "retained_repairs": 57,
+      "repair_total": 57,
+      "standard_change_ci": [
+        -0.0017774617845716318,
+        -0.003442010796950904,
+        -0.0003640087111648326
+      ],
+      "upd_change_ci": [
+        0.03602533650039588,
+        0.02919162841498847,
+        0.04327909468567848
+      ],
+      "passes_original_rule": true,
+      "ours_half_percent_minus_BICR_standard_ci": [
+        0.00035549235691432633,
+        -0.0013582400056718342,
+        0.0019889577778229926
+      ],
+      "ours_half_percent_minus_BICR_upd_ci": [
+        0.1581551860649248,
+        0.14251670479024547,
+        0.1740932118503679
+      ]
+    }
+  ]
+}
