@@ -1,0 +1,18 @@
+# InternVL3-8B training route (internvl/). Versions read from the environment that ran the recorded InternVL
+# training (torch 2.13.0+cu130 build). pandas, scikit-learn and tqdm are imported by CLIP-UP's package; their
+# versions in that environment were not queried.
+torch==2.13.0
+torchvision==0.28.0
+transformers==4.49.0
+numpy==2.3.5
+scipy==1.17.1
+peft==0.10.0         # imported by CLIP-UP's InternVL module; the training code uses its own LoRA layer
+accelerate==0.34.2
+safetensors==0.8.0
+Pillow==12.3.0
+timm==0.9.12         # InternVL remote code
+einops==0.6.1        # InternVL remote code
+openai-clip==1.0.1   # imported by CLIP-UP's package
+pandas
+scikit-learn
+tqdm
