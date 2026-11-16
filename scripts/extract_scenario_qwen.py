@@ -32,7 +32,7 @@ def main():
     ap.add_argument('--manifest', type=Path, required=True)
     ap.add_argument('--model', type=Path, required=True)
     ap.add_argument('--head', type=Path, required=True)
-    ap.add_argument('--image-root', type=Path, help='optional; default = absolute image paths in the manifest')
+    ap.add_argument('--image-root', type=Path, help='Directory prepended to relative image paths in the manifest.')
     ap.add_argument('--code', type=Path, default=Path(__file__).resolve().parent,
                     help='Directory holding extract_qwen_baselines.py.')
     ap.add_argument('--output', type=Path, required=True)
@@ -53,7 +53,8 @@ def main():
     assert len({r['sid'] for r in rows}) == len(rows)
 
     def image_path(row):
-        return a.image_root / Path(row['image']).name if a.image_root else Path(row['image'])
+        path = Path(row['image'])
+        return a.image_root / path if a.image_root and not path.is_absolute() else path
 
     for r in rows:
         assert image_path(r).is_file(), (r['sid'], str(image_path(r)))
@@ -170,7 +171,8 @@ def main():
                     x.flush()
                 state = dict(state='complete' if i + 1 == n else 'running', completed=i + 1, total=n,
                              seconds=state.get('seconds', 0.) + time.perf_counter() - started,
-                             live_first_token_agreement=[agree, seen], live_max_abs_s0_difference=max_s0_diff)
+                             live_first_token_agreement=[agree, seen],
+                             live_max_abs_s0_difference=max_s0_diff if archived_s0 else None)
                 started = time.perf_counter()
                 write_json(a.output / 'status.json', state)
                 print(json.dumps(state), flush=True)
