@@ -12,7 +12,20 @@
 | `splits/mmupd_adaptation.json` | Exact CM partition, adaptation IDs and image-cluster folds |
 | `results/two_block/` | Two source heads, all six scenario heads/policies, row scores, labels and original answers |
 
-The [scenario guide](scenario-adaptation.md) describes the complete extraction, fitting, recalibration and application commands.
+The [scenario guide](scenario-adaptation.md) describes the complete extraction, fitting, recalibration and application commands. `scripts/verify_vizwiz_full.py` recomputes the [open-ended complete-module confirmation](vizwiz-full.md), including its paired intervals, from compact row records.
+
+## InternVL training route
+
+| File | Role |
+|---|---|
+| `internvl/ivl_recipe.py` | Both stage recipes, training rows from the Qwen scripts' row functions, data order and the CPU data check |
+| `internvl/ivl_common.py` | Model loading, prompt, training example, LoRA layer, forward pass, loss, schedulers and float32 merge |
+| `internvl/ivl_train_sft.py` | Answer SFT (B1) or ordinary refusal SFT |
+| `internvl/ivl_merge.py` | Merge an adapter into bfloat16 weights with one rounding, then reload and check |
+| `internvl/ivl_check_masking.py` | Optional read-only check of inputs, loss masking, zero-initialized LoRA and gradients |
+| `internvl/recorded_run.json` | Data reports, environment, training and merge records of the runs behind the released results |
+
+The [InternVL training guide](internvl-reproduction.md) gives the environment, recipe and commands.
 
 ## Source-head and baseline pipeline
 
@@ -40,4 +53,4 @@ The [scenario guide](scenario-adaptation.md) describes the complete extraction, 
 | `score_confirmation.py` | Frozen independent confirmation and gain retention |
 | `verify_results.py` | Recompute published main/confirmation counts from correctness records |
 
-All Python files are in `scripts/`. `results/` contains experiment evidence; `manifests/` specifies the benchmark inputs; `tests/` exercises threshold boundaries, denominator choice, label-free routing, and sample alignment.
+Scenario and source-head scripts are in `scripts/`; InternVL training scripts are in `internvl/`. `results/` contains experiment evidence; `manifests/` specifies the benchmark inputs; `tests/` exercises threshold boundaries, denominator choice, label-free routing, and sample alignment.

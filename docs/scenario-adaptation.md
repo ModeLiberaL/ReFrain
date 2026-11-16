@@ -34,7 +34,7 @@ Qwen2.5-VL-3B uses final layer 36 and question layer 27, each of dimension 2,048
 For Qwen2.5-VL-3B, extract one split from a JSONL manifest containing `sid`, `image`, and `prompt`:
 
 ```bash
-python scripts/extract_scenario_qwen.py --manifest CM.jsonl --model checkpoints/B1 \
+python scripts/extract_scenario_qwen.py --manifest CM.jsonl --image-root data/images --model checkpoints/B1 \
   --head results/two_block/qwen/source_head.npz --output features/CM
 python scripts/pack_scenario_cache.py --features features/CM \
   --records splits/qwen_A_records.json --image V27.npy --output A.npz
@@ -55,7 +55,7 @@ python scripts/pack_scenario_cache.py --features features/internvl_CM \
   --records splits/internvl_A_records.json --output internvl_A.npz
 ```
 
-InternVL manifests use image paths relative to `--image-root`, or absolute paths. The recorded extractor uses six image tiles at most and the backbone's native conversation template. It obtains the first prefill through a native one-token generation. The recorded Qwen GPU stack is PyTorch 2.13.0 with CUDA 13.0 and Transformers 5.17.0; InternVL uses the same PyTorch build with Transformers 4.49.0 and the pinned CLIP-UP loader. CPU fitting uses the separate requirements above.
+InternVL manifests use image paths relative to `--image-root`, or absolute paths. The recorded extractor uses six image tiles at most and the backbone's native conversation template. It obtains the first prefill through a native one-token generation. The recorded Qwen GPU stack is PyTorch 2.13.0 with CUDA 13.0 and Transformers 5.17.0; InternVL uses the same PyTorch build with Transformers 4.49.0 and the CLIP-UP image loader. CPU fitting uses the separate requirements above.
 
 ```bash
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python scripts/scenario_selector.py fit \
