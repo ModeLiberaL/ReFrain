@@ -14,6 +14,8 @@
 
 The [scenario guide](scenario-adaptation.md) describes the complete extraction, fitting, recalibration and application commands. `scripts/verify_vizwiz_full.py` recomputes the [open-ended complete-module confirmation](vizwiz-full.md), including its paired intervals, from compact row records.
 
+`scripts/measure_full_module.py` integrates the complete score and veto into native generation and measures paired latency; `scripts/verify_full_module_cost.py` recomputes the released measurements on CPU. The [online cost guide](online-cost.md) provides both commands.
+
 ## Matched-data refusal SFT
 
 `scripts/train_refusal_sft_ta.py` trains ordinary refusal SFT on the fixed `manifests/TA.jsonl` from the common Qwen B1. `scripts/extract_sft_scores.py` extracts native answers and letter logits. `scripts/verify_matched_sft.py` recomputes calibration, frontiers, native ledgers, Circular metrics and paired intervals; `scripts/parse_circular_answers.py` independently parses native text with the official UPD code. The [matched-data guide](matched-refusal-sft.md) gives the data, recipe and commands.
