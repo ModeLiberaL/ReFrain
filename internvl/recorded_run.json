@@ -1,0 +1,578 @@
+{
+ "note": "Recorded InternVL3-8B training runs (answer SFT -> B1, ordinary refusal SFT from B1). Machine paths removed. The data reports are compared by ivl_recipe.py; the remaining fields document the run.",
+ "model": {
+  "hub_id": "OpenGVLab/InternVL3-8B",
+  "revision": "24dc81a234a6e1901f3314eeadaa2813f2b78038",
+  "revision_source": "pinned in CLIP-UP clip_up/vlms/internvl/clip_up_internvl_utils.py"
+ },
+ "answer": {
+  "recipe": {
+   "rank": 16,
+   "alpha": 32,
+   "dropout": 0.05,
+   "lr": 2e-05,
+   "weight_decay": 0.01,
+   "schedule": "linear",
+   "adapter_dtype": "float32",
+   "records": 677,
+   "steps": 510,
+   "warmup_steps": 16
+  },
+  "seed": 42,
+  "epochs": 3,
+  "records_per_step": 4,
+  "optimizer_steps": 510,
+  "warmup_steps": 16,
+  "optimizer": "AdamW (torch defaults for betas and eps)",
+  "schedule": "transformers.get_linear_schedule_with_warmup, stepped once per optimizer step",
+  "gradient_clipping": null,
+  "loss": "mean cross-entropy over the gold-letter token and the end token",
+  "lora_targets": "(^|\\.)layers\\.\\d+\\.(self_attn\\.(q_proj|k_proj|v_proj|o_proj)|mlp\\.(gate_proj|up_proj|down_proj))$",
+  "data": {
+   "mode": "answer",
+   "rows": 677,
+   "types": {
+    "standard": 677
+   },
+   "gold_letters": {
+    "A": 200,
+    "B": 164,
+    "C": 179,
+    "D": 134
+   },
+   "options_per_row": {
+    "2": 25,
+    "3": 72,
+    "4": 580
+   },
+   "records_in_last_step_of_an_epoch": 1,
+   "first_rows_of_each_epoch": [
+    [
+     "T/clip_up/train/ivqd/standard/588742",
+     "T/clip_up/train/ivqd/standard/588383",
+     "T/clip_up/train/ivqd/standard/588772",
+     "T/clip_up/train/aad/standard/18238"
+    ],
+    [
+     "T/clip_up/train/iasd/standard/19480",
+     "T/clip_up/train/aad/standard/18109",
+     "T/clip_up/train/ivqd/standard/588588",
+     "T/clip_up/train/aad/standard/18125"
+    ],
+    [
+     "T/clip_up/train/ivqd/standard/588614",
+     "T/clip_up/train/aad/standard/18196",
+     "T/clip_up/train/ivqd/standard/588761",
+     "T/clip_up/train/aad/standard/18252"
+    ]
+   ],
+   "first_indices_of_each_epoch": [
+    [
+     629,
+     462,
+     644,
+     140,
+     377,
+     433,
+     595,
+     459
+    ],
+    [
+     330,
+     65,
+     573,
+     70,
+     320,
+     89,
+     669,
+     369
+    ],
+    [
+     580,
+     105,
+     639,
+     154,
+     117,
+     343,
+     64,
+     408
+    ]
+   ],
+   "order": "numpy.random.default_rng(42 + epoch).permutation(677), epoch = 0, 1, 2",
+   "prompts": "answer_rows of train_answer_sft.py: abstention choice removed, letters remapped",
+   "abstention_choice_lines_in_training_prompts": 0,
+   "letters": "consecutive from A",
+   "prompts_equal_to_source_minus_the_choice": 677,
+   "rows_whose_removed_choice_was_last": 677,
+   "gold_letter_changed_by_remapping": 0
+  },
+  "audit": {
+   "trainable_parameters": 40370176,
+   "trainable_tensors": 392,
+   "lora_modules": 196,
+   "trainable_in_vision_model": 0,
+   "trainable_in_mlp1": 0,
+   "all_parameters": 7984743936,
+   "adapter_dtype": "torch.float32",
+   "base_dtype": "torch.bfloat16",
+   "gradient_checkpointing": true
+  },
+  "heldout": {
+   "training_images": 488,
+   "CM.jsonl": 4567,
+   "E.jsonl": 10678
+  },
+  "max_num_tiles": 6,
+  "end_token": "<|im_end|>",
+  "attention": "eager",
+  "attention_dropout": 0.0,
+  "environment": {
+   "torch": "2.13.0+cu130",
+   "transformers": "4.49.0",
+   "numpy": "2.3.5",
+   "gpu": "NVIDIA GeForce RTX 3090"
+  },
+  "start": "pinned InternVL3-8B",
+  "qwen_parity_at_run_time": {
+   "rows_equal": 677,
+   "config_values_equal": {
+    "seed": 42,
+    "epochs": 3,
+    "rows": 677,
+    "micro_batch": 1,
+    "effective_batch": 4,
+    "learning_rate": 2e-05,
+    "weight_decay": 0.01,
+    "warmup_ratio": 0.03,
+    "warmup_steps": 16,
+    "total_steps": 510,
+    "scheduler": "linear",
+    "lora_r": 16,
+    "lora_alpha": 32,
+    "lora_dropout": 0.05,
+    "max_grad_norm": null,
+    "adapter_dtype": "torch.float32",
+    "sequence_truncation": false
+   },
+   "log_steps": 510,
+   "learning_rate_max_difference": 0.0
+  },
+  "masking_check": {
+   "status": "pass",
+   "part_a": {
+    "rows": 677,
+    "supervised_tokens_per_row": 2,
+    "assistant_header": "<|im_start|>assistant\n",
+    "end_token": "<|im_end|>",
+    "num_image_token": 256,
+    "tiles": {
+     "1": 28,
+     "3": 26,
+     "4": 2,
+     "5": 13,
+     "7": 608
+    },
+    "sequence_length": {
+     "min": 338,
+     "median": 1890,
+     "max": 1949
+    },
+    "rows_equal_to_tokenizing_the_full_string": 677
+   },
+   "causal_atol": 1e-05,
+   "zero_atol": 1e-05,
+   "backward_peak_memory_gib": 17.684648990631104
+  },
+  "smoke": {
+   "steps": 2,
+   "seconds_per_step": 9.309300598499249,
+   "peak_memory_gib": 18.067298412322998,
+   "planned_steps": 510
+  },
+  "training": {
+   "steps": 510,
+   "epochs": [
+    {
+     "epoch": 1,
+     "mean_step_loss": 0.02080036758253348,
+     "first_token_hits_while_training": 668,
+     "records": 677
+    },
+    {
+     "epoch": 2,
+     "mean_step_loss": 0.0032950577144211122,
+     "first_token_hits_while_training": 676,
+     "records": 677
+    },
+    {
+     "epoch": 3,
+     "mean_step_loss": 0.000679408214823345,
+     "first_token_hits_while_training": 677,
+     "records": 677
+    }
+   ],
+   "seconds": 4238.115557554993,
+   "peak_memory_gib": 18.151199340820312
+  },
+  "merge": {
+   "role": "b1",
+   "adapter_meta": {
+    "mode": "answer",
+    "rank": 16,
+    "alpha": 32,
+    "dropout": 0.05,
+    "adapter_dtype": "float32",
+    "steps": 510,
+    "seed": 42,
+    "modules": 196
+   },
+   "merge": "float32(W) + (alpha / rank) B A, rounded once to the stored dtype",
+   "rounding": {
+    "modules": 196,
+    "weight_dtype": "torch.bfloat16",
+    "elements": 6525288448,
+    "changed_elements": 1250864090,
+    "changed_fraction": 0.19169483463729325,
+    "update_norm": 1.0700619284939994,
+    "realised_norm": 0.8812136223633883,
+    "relative_rounding_error": 0.7881825633662088,
+    "max_abs_update": 0.00027013442013412714
+   },
+   "check": {
+    "rows": 32,
+    "reload_max_error": 0.0,
+    "adapter_vs_base_max_abs_logit": 13.4375,
+    "merged_vs_adapter_max_abs_logit": 4.25,
+    "merged_vs_adapter_same_argmax": 32,
+    "merged_vs_adapter_same_letter": 32,
+    "gold_letter_hits_by_type": {
+     "merged": {
+      "standard": [
+       32,
+       32
+      ],
+      "upd": [
+       0,
+       0
+      ]
+     }
+    }
+   },
+   "copied_from_base": [
+    ".gitattributes",
+    "README.md",
+    "added_tokens.json",
+    "config.json",
+    "configuration_intern_vit.py",
+    "configuration_internvl_chat.py",
+    "conversation.py",
+    "generation_config.json",
+    "merges.txt",
+    "modeling_intern_vit.py",
+    "modeling_internvl_chat.py",
+    "preprocessor_config.json",
+    "shards.txt",
+    "special_tokens_map.json",
+    "tokenizer.json",
+    "tokenizer_config.json",
+    "vocab.json"
+   ],
+   "files_not_in_base": [],
+   "environment": {
+    "torch": "2.13.0+cu130",
+    "transformers": "4.49.0"
+   }
+  }
+ },
+ "refusal": {
+  "recipe": {
+   "rank": 8,
+   "alpha": 16,
+   "dropout": 0.05,
+   "lr": 4e-05,
+   "weight_decay": 0.0001,
+   "schedule": "cosine",
+   "adapter_dtype": "bfloat16",
+   "records": 1354,
+   "steps": 1017,
+   "warmup_steps": 30
+  },
+  "seed": 42,
+  "epochs": 3,
+  "records_per_step": 4,
+  "optimizer_steps": 1017,
+  "warmup_steps": 30,
+  "optimizer": "AdamW (torch defaults for betas and eps)",
+  "schedule": "transformers.get_cosine_schedule_with_warmup, stepped once per optimizer step",
+  "gradient_clipping": null,
+  "loss": "mean cross-entropy over the gold-letter token and the end token",
+  "lora_targets": "(^|\\.)layers\\.\\d+\\.(self_attn\\.(q_proj|k_proj|v_proj|o_proj)|mlp\\.(gate_proj|up_proj|down_proj))$",
+  "data": {
+   "mode": "refusal",
+   "rows": 1354,
+   "types": {
+    "standard": 677,
+    "upd": 677
+   },
+   "gold_letters": {
+    "A": 200,
+    "B": 164,
+    "C": 230,
+    "D": 405,
+    "E": 355
+   },
+   "options_per_row": {
+    "3": 76,
+    "4": 343,
+    "5": 935
+   },
+   "records_in_last_step_of_an_epoch": 2,
+   "first_rows_of_each_epoch": [
+    [
+     "T/clip_up/train/ivqd/upd/588780",
+     "T/clip_up/train/ivqd/standard/588780",
+     "T/clip_up/train/iasd/upd/19492",
+     "T/clip_up/train/iasd/standard/19492"
+    ],
+    [
+     "T/clip_up/train/ivqd/upd/588682",
+     "T/clip_up/train/ivqd/standard/588682",
+     "T/clip_up/train/iasd/upd/19367",
+     "T/clip_up/train/iasd/standard/19367"
+    ],
+    [
+     "T/clip_up/train/aad/upd/18287",
+     "T/clip_up/train/aad/standard/18287",
+     "T/clip_up/train/aad/upd/18329",
+     "T/clip_up/train/aad/standard/18329"
+    ]
+   ],
+   "first_indices_of_each_epoch": [
+    [
+     1293,
+     1292,
+     673,
+     672,
+     127,
+     126,
+     735,
+     734
+    ],
+    [
+     1225,
+     1224,
+     525,
+     524,
+     679,
+     678,
+     1335,
+     1334
+    ],
+    [
+     379,
+     378,
+     463,
+     462,
+     461,
+     460,
+     595,
+     594
+    ]
+   ],
+   "prompts": "original manifest prompts, abstention choice present in every row",
+   "pairs": 677,
+   "order": "numpy.random.RandomState(42).permutation(677 pairs), one call per epoch; UPD then Standard of each pair; two pairs per step",
+   "first_pairs_of_each_epoch": [
+    [
+     "clip_up/ivqd/588780",
+     "clip_up/iasd/19492"
+    ],
+    [
+     "clip_up/ivqd/588682",
+     "clip_up/iasd/19367"
+    ],
+    [
+     "clip_up/aad/18287",
+     "clip_up/aad/18329"
+    ]
+   ]
+  },
+  "audit": {
+   "trainable_parameters": 20185088,
+   "trainable_tensors": 392,
+   "lora_modules": 196,
+   "trainable_in_vision_model": 0,
+   "trainable_in_mlp1": 0,
+   "all_parameters": 7964558848,
+   "adapter_dtype": "torch.bfloat16",
+   "base_dtype": "torch.bfloat16",
+   "gradient_checkpointing": true
+  },
+  "heldout": {
+   "training_images": 708,
+   "CM.jsonl": 4567,
+   "E.jsonl": 10678
+  },
+  "max_num_tiles": 6,
+  "end_token": "<|im_end|>",
+  "attention": "eager",
+  "attention_dropout": 0.0,
+  "environment": {
+   "torch": "2.13.0+cu130",
+   "transformers": "4.49.0",
+   "numpy": "2.3.5",
+   "gpu": "NVIDIA GeForce RTX 3090"
+  },
+  "start": "merged B1 (role b1)",
+  "qwen_parity_at_run_time": {
+   "rows_equal": 1354,
+   "config_values_equal": {
+    "seed": 42,
+    "epochs": 3,
+    "rows": 1354,
+    "micro_batch": 1,
+    "effective_batch": 4,
+    "learning_rate": 4e-05,
+    "weight_decay": 0.0001,
+    "warmup_ratio": 0.03,
+    "warmup_steps": 30,
+    "total_steps": 1017,
+    "scheduler": "cosine",
+    "lora_r": 8,
+    "lora_alpha": 16,
+    "lora_dropout": 0.05,
+    "max_grad_norm": null,
+    "adapter_dtype": "torch.bfloat16",
+    "sequence_truncation": false
+   },
+   "log_steps": 1017,
+   "learning_rate_max_difference": 0.0
+  },
+  "masking_check": {
+   "status": "pass",
+   "part_a": {
+    "rows": 1354,
+    "supervised_tokens_per_row": 2,
+    "assistant_header": "<|im_start|>assistant\n",
+    "end_token": "<|im_end|>",
+    "num_image_token": 256,
+    "tiles": {
+     "1": 64,
+     "3": 49,
+     "4": 3,
+     "5": 24,
+     "7": 1214
+    },
+    "sequence_length": {
+     "min": 346,
+     "median": 1899.0,
+     "max": 1958
+    },
+    "rows_equal_to_tokenizing_the_full_string": 1354
+   },
+   "causal_atol": 1e-05,
+   "zero_atol": 1e-05,
+   "backward_peak_memory_gib": 17.565471649169922
+  },
+  "smoke": {
+   "steps": 2,
+   "seconds_per_step": 9.709743965009693,
+   "peak_memory_gib": 17.53492259979248,
+   "planned_steps": 1017
+  },
+  "training": {
+   "steps": 1017,
+   "epochs": [
+    {
+     "epoch": 1,
+     "mean_step_loss": 0.04148082874175532,
+     "first_token_hits_while_training": 1323,
+     "records": 1354
+    },
+    {
+     "epoch": 2,
+     "mean_step_loss": 0.005222498635901083,
+     "first_token_hits_while_training": 1351,
+     "records": 1354
+    },
+    {
+     "epoch": 3,
+     "mean_step_loss": 0.0015693586506449805,
+     "first_token_hits_while_training": 1354,
+     "records": 1354
+    }
+   ],
+   "seconds": 8815.670097935974,
+   "peak_memory_gib": 17.675358295440674
+  },
+  "merge": {
+   "role": "refusal",
+   "adapter_meta": {
+    "mode": "refusal",
+    "rank": 8,
+    "alpha": 16,
+    "dropout": 0.05,
+    "adapter_dtype": "bfloat16",
+    "steps": 1017,
+    "seed": 42,
+    "modules": 196
+   },
+   "merge": "float32(W) + (alpha / rank) B A, rounded once to the stored dtype",
+   "rounding": {
+    "modules": 196,
+    "weight_dtype": "torch.bfloat16",
+    "elements": 6525288448,
+    "changed_elements": 2030905550,
+    "changed_fraction": 0.31123613403212425,
+    "update_norm": 1.9307625208558281,
+    "realised_norm": 1.8557855426631558,
+    "relative_rounding_error": 0.6533468457453664,
+    "max_abs_update": 0.0005908786552026868
+   },
+   "check": {
+    "rows": 32,
+    "reload_max_error": 0.0,
+    "adapter_vs_base_max_abs_logit": 6.25,
+    "merged_vs_adapter_max_abs_logit": 4.5,
+    "merged_vs_adapter_same_argmax": 32,
+    "merged_vs_adapter_same_letter": 32,
+    "gold_letter_hits_by_type": {
+     "merged": {
+      "standard": [
+       32,
+       32
+      ],
+      "upd": [
+       0,
+       0
+      ]
+     }
+    }
+   },
+   "copied_from_base": [
+    ".gitattributes",
+    "README.md",
+    "added_tokens.json",
+    "config.json",
+    "configuration_intern_vit.py",
+    "configuration_internvl_chat.py",
+    "conversation.py",
+    "generation_config.json",
+    "merges.txt",
+    "modeling_intern_vit.py",
+    "modeling_internvl_chat.py",
+    "preprocessor_config.json",
+    "shards.txt",
+    "special_tokens_map.json",
+    "tokenizer.json",
+    "tokenizer_config.json",
+    "vocab.json"
+   ],
+   "files_not_in_base": [],
+   "environment": {
+    "torch": "2.13.0+cu130",
+    "transformers": "4.49.0"
+   }
+  }
+ }
+}
