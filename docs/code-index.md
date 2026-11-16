@@ -1,14 +1,30 @@
 # Source index
 
+## Current scenario module
+
+| File | Role |
+|---|---|
+| `scripts/scenario_selector.py` | Fit one of six components, calibrate a loss budget, and route original answers without evaluation labels |
+| `scripts/pack_scenario_cache.py` | Assemble extracted blocks and explicit A/B record lists into portable NPZ caches |
+| `scripts/extract_scenario_qwen.py` | Frozen Qwen prefill: final state, question/image pools and source score |
+| `scripts/extract_scenario_internvl.py` | Frozen InternVL prefill with its native conversation template and CLIP-UP image loader |
+| `scripts/verify_scenario_records.py` | Recompute component tables, frozen Circular results, unified-reference losses/repairs and paired intervals from released records |
+| `splits/mmupd_adaptation.json` | Exact CM partition, adaptation IDs and image-cluster folds |
+| `results/two_block/` | Two source heads, all six scenario heads/policies, row scores, labels and original answers |
+
+The [scenario guide](scenario-adaptation.md) describes the complete extraction, fitting, recalibration and application commands.
+
+## Source-head and baseline pipeline
+
 | File | Role |
 |---|---|
 | `train_answer_sft.py` | Answer-only SFT; saves the shared merged B1 |
 | `train_refusal_sft.py` | Matched ordinary refusal-SFT branch |
 | `extract_qwen_baselines.py` | Native greedy answers, first-token logits, last-prompt hidden features |
-| `fit_qwen_probes.py` | Fixed-C and cluster-cross-validated logistic probes |
+| `fit_qwen_probes.py` | Fixed-C and cluster-cross-validated logistic probes; configurable `--c-grid` |
 | `selector.py` | Correct-answer-loss threshold and answer-preserving NOTA routing |
-| `calibrate_selector.py` | T/CM-only frozen policy selection |
-| `apply_selector.py` | Label-free application to a new cache |
+| `calibrate_selector.py` | T/CM-only frozen policy selection; accepts a selected `--probe` archive |
+| `apply_selector.py` | Label-free application to a new logits or hidden-state cache |
 | `compare_branches.py` | Shared-B1 comparison, loss/repair decomposition, gain retention |
 | `evaluation.py` | Native cache reader, circular metrics, paired image-cluster intervals |
 | `x2_score.py` | Deterministic answer/abstain/invalid scoring |

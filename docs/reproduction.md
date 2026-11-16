@@ -1,5 +1,20 @@
 # Reproduction
 
+## Two-block scenario module
+
+The current main method is documented in [scenario-adaptation.md](scenario-adaptation.md). On CPU, install `requirements-scenario.txt` and run:
+
+```bash
+tar -xzf results/two_block_records.tar.gz
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python scripts/verify_scenario_records.py
+```
+
+The released records reproduce the component study on Qwen and InternVL without model weights. To refit, extract the two state blocks from B1, pack A/B using the released record lists, then run `scenario_selector.py fit`. Use `calibrate` to change the budget and `apply` to route answers on unlabeled feature caches. Both source heads and all fitted scenario heads are included under `results/two_block/`.
+
+The portable CPU fit was compared with the research implementation for both backbones and all six components: selected C agrees, per-row scores agree within numerical tolerance, and all 0%/0.5% frozen veto sets agree exactly. The standalone routing command preserves original answer text on kept rows and uses no evaluation labels.
+
+## Original answer-training and source-head pipeline
+
 Run GPU commands on the training server. Paths below are examples supplied by the operator. Commands assume the repository is the current directory and the images described in [data.md](data.md) have been prepared.
 
 ```bash
@@ -53,6 +68,8 @@ python scripts/compare_branches.py --root runs/b1 --reference runs/b0 \
 ```
 
 Only T labels enter probe fitting and cross-validation. CM correctness enters calibration. Evaluation labels enter reporting only. Ties are retained (`score >= threshold`); the candidate grid includes negative and positive infinity. The 0.5% budget divides lost correct answers by **all Standard calibration examples**, not by the subset B1 answers correctly.
+
+The command above uses the original five-value regularization grid. The [nine-value regularized recipe](regularized-recipe.md) supplies an explicit `--c-grid` and retains the same fitting, calibration, and execution rules.
 
 `compare_branches.py` reports the two prescribed budgets, their realized losses, independent losses/repairs, SFT-gain retention, and 2,000 image-cluster bootstrap intervals. To include EmbLoRA, pass `--clipup path/to/EmbLoRA_E_answers.jsonl`. Each line must contain `sid` and `response`. In the result files, R0 means B0, R1 means shared B1, R2 means ReFrain, and R3 means EmbLoRA. Legacy `passes_original_rule` fields additionally require the lower 95% interval bound for Standard change to exceed -1 percentage point and the UPD-change lower bound to exceed zero. This is separate from the 0.5% calibration budget.
 
